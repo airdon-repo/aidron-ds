@@ -1,0 +1,144 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Button } from './Button';
+
+<Meta
+  title="Core/Button/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Button
+Buttons expressam uma ação a ser executada a partir do clique ou toque em sua área. A label de um button apresenta-se no infinitivo e indica de maneira clara o resultado decorrente de sua interação.
+
+<Canvas>
+  <Button
+    label="label"
+    onClick={() => {}}
+  />
+  <Button
+    label="label"
+    onClick={() => {}}
+    type="outlined"
+  />
+  <Button
+    label="label"
+    onClick={() => {}}
+    type="ghost"
+  />
+  <Button
+    label="label"
+    onClick={() => {}}
+    icon="zap"
+    position="left"
+  />
+  <Button
+    label="label"
+    onClick={() => {}}
+    type="outlined"
+    icon="zap"
+    position="left"
+  />
+  <Button
+    label="label"
+    onClick={() => {}}
+    type="ghost"
+    icon="zap"
+    position="left"
+  />
+  <Button
+    label=""
+    onClick={() => {}}
+    icon="zap"
+  />
+  <Button
+    label=""
+    onClick={() => {}}
+    type="outlined"
+    icon="zap"
+  />
+  <Button
+    label=""
+    onClick={() => {}}
+    type="ghost"
+    icon="zap"
+  />
+  <Button
+    label="label"
+    onClick={() => {}}
+    size="lg"
+  />
+  <Button
+    label="label"
+    onClick={() => {}}
+    type="outlined"
+    size="lg"
+  />
+  <Button
+    label="label"
+    onClick={() => {}}
+    type="ghost"
+    size="lg"
+  />
+  <Button
+    label="label"
+    onClick={() => {}}
+    icon="zap"
+    position="left"
+    size="lg"
+  />
+  <Button
+    label="label"
+    onClick={() => {}}
+    type="outlined"
+    icon="zap"
+    position="left"
+    size="lg"
+  />
+  <Button
+    label="label"
+    onClick={() => {}}
+    type="ghost"
+    icon="zap"
+    position="left"
+    size="lg"
+  />
+  <Button
+    label=""
+    onClick={() => {}}
+    icon="zap"
+    size="lg"
+  />
+  <Button
+    label=""
+    onClick={() => {}}
+    type="outlined"
+    icon="zap"
+    size="lg"
+  />
+  <Button
+    label=""
+    onClick={() => {}}
+    type="ghost"
+    icon="zap"
+    size="lg"
+  />
+</Canvas>
+
+## Anatomia
+* Container
+* Label
+* Lead Icon (opcional)
+* Trailing Icon (opcional)
+
+## Design Tokens
+`$font-weight-bold`
+`$elevation-level-light-2`
+`$spacing-inline-xs`
+`$spacing-inline-sm`
+`$font-size-xs`
+`$font-size-sm`
+
+## Variações
+* Light Mode.
+* Dark Mode.
+* Tamanho.
+* Estados.

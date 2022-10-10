@@ -1,0 +1,42 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Radio } from './Radio';
+import { RadioOption } from './RadioOption';
+
+<Meta
+  title="Core/Radio/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Radio
+Radios são utilizados quando, dentro de uma variedade de opções, apenas uma pode ser selecionada. Se há apenas uma opção para ser selecionada, usa-se o checkbox. É um componente exclusivo para Web e Android.
+<Canvas>
+  <Radio
+    label="label"
+    selected="2" 
+    handleChange={(x) => console.log(x)}
+  >
+    <RadioOption value="1">Option 1</RadioOption>
+    <RadioOption value="2">Option 2</RadioOption>
+    <RadioOption value="3">Option 3</RadioOption>
+  </Radio>
+</Canvas>
+
+## Anatomia
+* Check icon ou Indeterminate icon (apenas quando selecionado).
+* Checkbox.
+* Label.
+* Hit area.
+
+## Design Tokens
+`$spacing-inline-sm`
+`$font-weight-bold`
+`$opacity-light-transparent`
+`$opacity-dark-transparent`
+`$opacity-light-semi-transparent`
+`$opacity-dark-semi-transparent`
+
+## Variações
+* Light Mode.
+* Dark Mode.
+* No Label.
+* Estado.

@@ -1,0 +1,42 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Progress } from './Progress';
+
+<Meta
+  title="Core/Progress/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Progress
+Os indicadores de progresso expressam um tempo de espera não especificado ou exibem a duração de um processo.
+
+<Canvas>
+  <Progress
+    determinate
+    value={60}
+    width="128px"
+  />
+  <Progress
+    determinate
+    value={60}
+    circular
+    width="128px"
+  />
+  <Progress
+    width="128px"
+  />
+  <Progress
+    circular
+    width="128px"
+  />
+</Canvas>
+
+## Anatomia
+* Indicator.
+* Track.
+
+## Design Tokens
+`$border-radius-sm`
+
+## Variações
+* Light Mode.
+* Dark Mode.

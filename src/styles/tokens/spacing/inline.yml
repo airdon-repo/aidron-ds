@@ -1,0 +1,63 @@
+---
+global:
+  type: spacing
+  category: category-spacing
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: spacing-inline-xxxs
+    value: '{!spacing-inline-xxxs}'
+    meta:
+      friendlyName: Spacing Inline XXXS
+    category: spacing
+
+  - name: spacing-inline-xxs
+    value: '{!spacing-inline-xxs}'
+    meta:
+      friendlyName: Spacing Inline XXS
+    category: spacing
+
+  - name: spacing-inline-xs
+    value: '{!spacing-inline-xs}'
+    meta:
+      friendlyName: Spacing Inline XS
+    category: spacing
+
+  - name: spacing-inline-sm
+    value: '{!spacing-inline-sm}'
+    meta:
+      friendlyName: Spacing Inline SM
+    category: spacing
+
+  - name: spacing-inline-md
+    value: '{!spacing-inline-md}'
+    meta:
+      friendlyName: Spacing Inline MD
+    category: spacing
+
+  - name: spacing-inline-lg
+    value: '{!spacing-inline-lg}'
+    meta:
+      friendlyName: Spacing Inline LG
+    category: spacing
+
+  - name: spacing-inline-xl
+    value: '{!spacing-inline-xl}'
+    meta:
+      friendlyName: Spacing Inline XL
+    category: spacing
+
+  - name: spacing-inline-xxl
+    value: '{!spacing-inline-xxl}'
+    meta:
+      friendlyName: Spacing Inline XXL
+    category: spacing
+
+
+  - name: spacing-stack-xxxl
+    value: '{!spacing-stack-xxxl}'
+    meta:
+      friendlyName: Spacing Stack XXXL
+    category: spacing

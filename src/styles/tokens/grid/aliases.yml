@@ -1,0 +1,45 @@
+---
+global:
+  type: aliases
+  category: category-sizing
+
+aliases:
+  layout-grid-sm__size: '600px'
+  layout-grid-sm__container: '100%'
+  layout-grid-sm__columns: '4'
+  layout-grid-sm__margin: '16px'
+  layout-grid-sm__gutter: '16px'
+
+  layout-grid-md__size: '960px'
+  layout-grid-md__container: '100%'
+  layout-grid-md__columns: '8'
+  layout-grid-md__margin: '32px'
+  layout-grid-md__gutter: '16px'
+
+  layout-grid-lg__sidebar_close: '80px'
+  layout-grid-lg__sidebar_close__size: '1280px'
+  layout-grid-lg__sidebar_close__container: '100%'
+  layout-grid-lg__sidebar_close__columns: '12'
+  layout-grid-lg__sidebar_close__margin: '32px'
+  layout-grid-lg__sidebar_close__gutter: '16px'
+
+  layout-grid-lg__sidebar_open: '220px'
+  layout-grid-lg__sidebar_open__size: '1280px'
+  layout-grid-lg__sidebar_open__container: '100%'
+  layout-grid-lg__sidebar_open__columns: '12'
+  layout-grid-lg__sidebar_open__margin: '32px'
+  layout-grid-lg__sidebar_open__gutter: '16px'
+
+  layout-grid-xl__sidebar_close: '220px'
+  layout-grid-xl__sidebar_close__size: '1600px'
+  layout-grid-xl__sidebar_close__container: '1600px'
+  layout-grid-xl__sidebar_close__columns: '12'
+  layout-grid-xl__sidebar_close__margin: '48px'
+  layout-grid-xl__sidebar_close__gutter: '16px'
+
+  layout-grid-xl__sidebar_open: '80px'
+  layout-grid-xl__sidebar_open__size: '1600px'
+  layout-grid-xl__sidebar_open__container: '1600px'
+  layout-grid-xl__sidebar_open__columns: '12'
+  layout-grid-xl__sidebar_open__margin: '48px'
+  layout-grid-xl__sidebar_open__gutter: '16px'

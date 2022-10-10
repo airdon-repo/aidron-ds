@@ -1,0 +1,52 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Card } from './Card';
+import { Heading } from '../Heading';
+import { Icon } from '../Icon';
+import { Text } from '../Text';
+
+<Meta
+  title="Core/Card/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Card
+Os cartões contêm conteúdo e ações sobre um único assunto. 
+
+<Canvas>
+  <Card>
+    <div>
+      <Heading size="md">
+        Title
+        <span className="icon-wrapper">
+          <Icon icon="share-2" />
+          <Icon icon="more-vertical" />
+          <Icon icon="x" />
+        </span>
+      </Heading>
+      <Text>
+        Lorem Ipsum Dolor Sit Amet
+      </Text>
+    </div>
+  </Card>
+</Canvas>
+
+## Anatomia
+* Container
+* Title (opcional)
+* Description (opcional)
+* Actions (opcional)
+
+## Design Tokens
+`$border-radius-sm`
+`$spacing-inset-sm`
+`$spacing-inline-md`
+`$elevation-level-light-1`
+`$elevation-level-dark-1`
+
+## Variações
+* Light Mode.
+* Dark Mode.
+
+<!-- ### Comportamento
+* Se possível mostrar a foto do usuário.
+* Se não houver foto as iniciais são exibidas. -->

@@ -1,0 +1,74 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Grid } from './Grid';
+import { GridItem } from './GridItem';
+import { Sidebar } from '../Sidebar';
+
+<Meta
+  title="Core/Grid/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Grid
+Os Dialogs informam os usuários sobre uma tarefa e podem conter informações críticas, exigir decisões ou envolver várias tarefas. 
+
+<Canvas>
+  <Grid sidebar>
+    <Sidebar onColapse={() => {}}>
+      Sidebar
+    </Sidebar>
+    <GridItem
+      className="red-medium spacing-inset-md"
+      size={{
+        lg: 3,
+        md: 2,
+        sm: 2,
+        xl: 3
+      }}
+    >
+      Column 1
+    </GridItem>
+    <GridItem
+      className="blue-medium spacing-inset-md"
+      size={{
+        lg: 3,
+        md: 2,
+        sm: 2,
+        xl: 3
+      }}
+    >
+      Column 2
+    </GridItem>
+    <GridItem
+      className="green-medium spacing-inset-md"
+      size={{
+        lg: 3,
+        md: 2,
+        sm: 2,
+        xl: 3
+      }}
+    >
+      Column 3
+    </GridItem>
+    <GridItem
+      className="yellow-medium spacing-inset-md"
+      size={{
+        lg: 3,
+        md: 2,
+        sm: 2,
+        xl: 3
+      }}
+    >
+      Column 4
+    </GridItem>
+  </Grid>
+</Canvas>
+
+## Anatomia
+* Container
+* Items
+
+## Design Tokens
+Os design tokens relacionados a este componente dependem somente das `@media queries` controladas pelo browser, responsável pela largura das colunas, número de colunas, gutter, sidebar e largura do container.
+
+## Variações
+* Tamanho.

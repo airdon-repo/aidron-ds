@@ -1,0 +1,47 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Select } from './Select';
+import { SelectItem } from './SelectItem';
+
+<Meta
+  title="Core/Select/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Select
+Menus tem como função apresentar opções de seleção para um usuário.
+<Canvas>
+  <Select
+    label="Options"
+    width="250px"
+    placeholder="Placeholder"
+    handleChange={(x) => console.log(x)}
+  >
+    <SelectItem value="1">Option 1</SelectItem>
+    <SelectItem value="2">Option 2</SelectItem>
+    <SelectItem value="3">Option 3</SelectItem>
+    <SelectItem value="4">Option 4</SelectItem>
+    <SelectItem value="5">Option 5</SelectItem>
+    <SelectItem value="6">Option 6</SelectItem>
+    <SelectItem value="7">Option 7 with long text for masking purposes</SelectItem>
+  </Select>
+</Canvas>
+
+## Anatomia
+* Text Field
+* Option Label
+* Selected icon
+* Selected option
+* List container
+* Scroll Bar
+
+
+## Design Tokens
+`$border-radius-sm`
+`$spacing-inline-sm`
+`$elevation-level-light-3`
+`$elevation-level-dark-3`
+
+## Variações
+* Light Mode.
+* Dark Mode.
+* Dropdown

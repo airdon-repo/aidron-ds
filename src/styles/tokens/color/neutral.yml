@@ -1,0 +1,146 @@
+---
+global:
+  type: color
+  category: category-color
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: neutral-70
+    value: '{!neutral-70}'
+    meta:
+      friendlyName: Color Brand Neutral 70
+    category: background-color
+
+  - name: neutral-60
+    value: '{!neutral-60}'
+    meta:
+      friendlyName: Color Brand Neutral 60
+    category: background-color
+
+  - name: neutral-50
+    value: '{!neutral-50}'
+    meta:
+      friendlyName: Color Brand Neutral 50
+    category: background-color
+
+  - name: neutral-40
+    value: '{!neutral-40}'
+    meta:
+      friendlyName: Color Brand Neutral 40
+    category: background-color
+
+  - name: neutral-30
+    value: '{!neutral-30}'
+    meta:
+      friendlyName: Color Brand Neutral 30
+    category: background-color
+
+  - name: neutral-20
+    value: '{!neutral-20}'
+    meta:
+      friendlyName: Color Brand Neutral 20
+    category: background-color
+
+  - name: neutral-10
+    value: '{!neutral-10}'
+    meta:
+      friendlyName: Color Brand Neutral 10
+    category: background-color
+
+  - name: neutral-white
+    value: '{!neutral-white}'
+    meta:
+      friendlyName: Color Brand Neutral white
+    category: background-color
+
+  - name: color-neutral-70
+    value: '{!color-neutral-70}'
+    meta:
+      friendlyName: Color Brand Neutral 70
+    category: color
+
+  - name: color-neutral-60
+    value: '{!color-neutral-60}'
+    meta:
+      friendlyName: Color Brand Neutral 60
+    category: color
+
+  - name: color-neutral-50
+    value: '{!color-neutral-50}'
+    meta:
+      friendlyName: Color Brand Neutral 50
+    category: color
+
+  - name: color-neutral-40
+    value: '{!color-neutral-40}'
+    meta:
+      friendlyName: Color Brand Neutral 40
+    category: color
+
+  - name: color-neutral-30
+    value: '{!color-neutral-30}'
+    meta:
+      friendlyName: Color Brand Neutral 30
+    category: color
+
+  - name: color-neutral-20
+    value: '{!color-neutral-20}'
+    meta:
+      friendlyName: Color Brand Neutral 20
+    category: color
+
+  - name: color-neutral-10
+    value: '{!color-neutral-10}'
+    meta:
+      friendlyName: Color Brand Neutral 10
+    category: color
+
+  - name: color-neutral-white
+    value: '{!color-neutral-white}'
+    meta:
+      friendlyName: Color Brand Neutral white
+    category: color
+
+  - name: border-neutral-70
+    value: '{!border-neutral-70}'
+    meta:
+      friendlyName: Border Brand Neutral 70
+    category: border
+
+  - name: border-neutral-60
+    value: '{!border-neutral-60}'
+    meta:
+      friendlyName: Border Brand Neutral 60
+    category: border
+
+  - name: border-neutral-50
+    value: '{!border-neutral-50}'
+    meta:
+      friendlyName: Border Brand Neutral 50
+    category: border
+
+  - name: border-neutral-40
+    value: '{!border-neutral-40}'
+    meta:
+      friendlyName: Border Brand Neutral 40
+    category: border
+
+  - name: border-neutral-30
+    value: '{!border-neutral-30}'
+    meta:
+      friendlyName: Border Brand Neutral 30
+    category: border
+
+  - name: border-neutral-10
+    value: '{!border-neutral-10}'
+    meta:
+      friendlyName: Border Brand Neutral 10
+    category: border
+
+  - name: border-neutral-white
+    value: '{!border-neutral-white}'
+    meta:
+      friendlyName: Border Brand Neutral white
+    category: border

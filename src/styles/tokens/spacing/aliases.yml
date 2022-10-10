@@ -1,0 +1,40 @@
+---
+global:
+  type: aliases
+  category: category-spacing
+
+aliases:
+  spacing-stack-xxxs: 2px
+  spacing-stack-xxs: 4px
+  spacing-stack-xs: 8px
+  spacing-stack-sm: 16px
+  spacing-stack-md: 24px
+  spacing-stack-lg: 32px
+  spacing-stack-xl: 64px
+  spacing-stack-xxl: 96px
+  spacing-stack-xxxl: 128px
+
+  spacing-inline-xxxs: 2px
+  spacing-inline-xxs: 4px
+  spacing-inline-xs: 8px
+  spacing-inline-sm: 16px
+  spacing-inline-md: 24px
+  spacing-inline-lg: 32px
+  spacing-inline-xl: 64px
+  spacing-inline-xxl: 96px
+  spacing-inline-xxxl: 128px
+
+  spacing-inset-xxxs: 2px
+  spacing-inset-xxs: 4px
+  spacing-inset-xs: 8px
+  spacing-inset-sm: 16px
+  spacing-inset-md: 24px
+  spacing-inset-lg: 32px
+  spacing-inset-xl: 64px
+
+  spacing-squish-xxxs: 2px 4px
+  spacing-squish-xxs: 4px 8px
+  spacing-squish-xs: 8px 16px
+  spacing-squish-sm: 16px 24px
+  spacing-squish-md: 24px 32px
+  spacing-squish-lg: 32px 64px

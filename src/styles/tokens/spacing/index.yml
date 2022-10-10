@@ -1,0 +1,7 @@
+imports:
+  - ./stack.yml
+  - ./inline.yml
+  - ./inset.yml
+  - ./squish.yml
+global:
+  category: spacing

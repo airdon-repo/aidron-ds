@@ -1,0 +1,80 @@
+---
+global:
+  type: shadow
+  category: category-shadow
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: shadow-color-light-1
+    value: '{!shadow-color-light-1}'
+    meta:
+      friendlyName: Shadow color for light background with 4%
+    category: string
+
+  - name: shadow-color-light-2
+    value: '{!shadow-color-light-2}'
+    meta:
+      friendlyName: Shadow color for light background with 8%
+    category: string
+
+  - name: shadow-color-light-3
+    value: '{!shadow-color-light-3}'
+    meta:
+      friendlyName: Shadow color for light background with 16%
+    category: string
+  
+  - name: elevation-level-light-1
+    value: '{!elevation-level-light-1}'
+    meta:
+      friendlyName: Elevation Shadow 1
+    category: box-shadow
+
+  - name: elevation-level-light-2
+    value: '{!elevation-level-light-2}'
+    meta:
+      friendlyName: Elevation Shadow 2
+    category: box-shadow
+
+  - name: elevation-level-light-3
+    value: '{!elevation-level-light-3}'
+    meta:
+      friendlyName: Elevation Shadow 3
+    category: box-shadow
+
+  - name: shadow-color-dark-1
+    value: '{!shadow-color-dark-1}'
+    meta:
+      friendlyName: Shadow color for Dark background with 4%
+    category: string
+
+  - name: shadow-color-dark-2
+    value: '{!shadow-color-dark-2}'
+    meta:
+      friendlyName: Shadow color for Dark background with 8%
+    category: string
+
+  - name: shadow-color-dark-3
+    value: '{!shadow-color-dark-3}'
+    meta:
+      friendlyName: Shadow color for Dark background with 16%
+    category: string
+  
+  - name: elevation-level-dark-1
+    value: '{!elevation-level-dark-1}'
+    meta:
+      friendlyName: Elevation Shadow 1
+    category: box-shadow
+
+  - name: elevation-level-dark-2
+    value: '{!elevation-level-dark-2}'
+    meta:
+      friendlyName: Elevation Shadow 2
+    category: box-shadow
+
+  - name: elevation-level-dark-3
+    value: '{!elevation-level-dark-3}'
+    meta:
+      friendlyName: Elevation Shadow 3
+    category: box-shadow

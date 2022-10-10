@@ -1,0 +1,19 @@
+---
+global:
+  type: aliases
+  category: category-shadow
+
+aliases:
+  shadow-color-light-1: rgba(0, 0, 0, 0.04)
+  shadow-color-light-2: rgba(0, 0, 0, 0.08)
+  shadow-color-light-3: rgba(0, 0, 0, 0.16)
+  elevation-level-light-1: 0 4px 8px 0 $shadow-color-light-1
+  elevation-level-light-2: 0 4px 24px 0 $shadow-color-light-2
+  elevation-level-light-3: 0 4px 48px 0 $shadow-color-light-3
+
+  shadow-color-dark-1: rgba(0, 0, 0, 0.24)
+  shadow-color-dark-2: rgba(0, 0, 0, 0.48)
+  shadow-color-dark-3: rgba(0, 0, 0, 0.96)
+  elevation-level-dark-1: 0 4px 24px 0 $shadow-color-dark-1
+  elevation-level-dark-2: 0 4px 24px 0 $shadow-color-dark-2
+  elevation-level-dark-3: 0 4px 48px 0 $shadow-color-dark-3

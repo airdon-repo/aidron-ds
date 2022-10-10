@@ -1,0 +1,16 @@
+---
+global:
+  type: aliases
+  category: pallete-color
+
+aliases:
+  border-width-none: 0
+  border-width-sm: '1px'
+  border-width-md: '2px'
+
+  border-radius-none: 0
+  border-radius-sm: '4px'
+  border-radius-md: '8px'
+  border-radius-lg: '16px'
+  border-radius-circle: '50%'
+  border-radius-pill: '500px'

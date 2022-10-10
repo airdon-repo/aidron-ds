@@ -1,0 +1,212 @@
+---
+global:
+  type: sizing
+  category: category-sizing
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: layout-grid-sm__size
+    value: '{!layout-grid-sm__size}'
+    meta:
+      friendlyName: Maximum Grid width for Media Query SM
+    category: sizing
+
+  - name: layout-grid-sm__container
+    value: '{!layout-grid-sm__container}'
+    meta:
+      friendlyName: Maximum Grid width SM
+    category: sizing
+
+  - name: layout-grid-sm__columns
+    value: '{!layout-grid-sm__columns}'
+    meta:
+      friendlyName: Number of Columns SM
+    category: sizing
+
+  - name: layout-grid-sm__margin
+    value: '{!layout-grid-sm__margin}'
+    meta:
+      friendlyName: Margin width SM
+    category: sizing
+
+  - name: layout-grid-sm__gutter
+    value: '{!layout-grid-sm__gutter}'
+    meta:
+      friendlyName: Gutter width SM
+    category: sizing
+
+  - name: layout-grid-md__size
+    value: '{!layout-grid-md__size}'
+    meta:
+      friendlyName: Maximum Grid width for Media Query MD
+    category: sizing
+  
+  - name: layout-grid-md__container
+    value: '{!layout-grid-md__container}'
+    meta:
+      friendlyName: Maximum Grid width MD
+    category: sizing
+
+  - name: layout-grid-md__columns
+    value: '{!layout-grid-md__columns}'
+    meta:
+      friendlyName: Number of Columns MD
+    category: sizing
+
+  - name: layout-grid-md__margin
+    value: '{!layout-grid-md__margin}'
+    meta:
+      friendlyName: Margin width MD
+    category: sizing
+
+  - name: layout-grid-md__gutter
+    value: '{!layout-grid-md__gutter}'
+    meta:
+      friendlyName: Gutter width MD
+    category: sizing
+
+  - name: layout-grid-lg__sidebar_close
+    value: '{!layout-grid-lg__sidebar_close}'
+    meta:
+      friendlyName: Sidebar width LG
+    category: sizing
+
+  - name: layout-grid-lg__sidebar_close__size
+    value: '{!layout-grid-lg__sidebar_close__size}'
+    meta:
+      friendlyName: Maximum Grid width for Media Query LG
+    category: sizing
+  
+  - name: layout-grid-lg__sidebar_close__container
+    value: '{!layout-grid-lg__sidebar_close__container}'
+    meta:
+      friendlyName: Maximum Grid width LG
+    category: sizing
+
+  - name: layout-grid-lg__sidebar_close__columns
+    value: '{!layout-grid-lg__sidebar_close__columns}'
+    meta:
+      friendlyName: Number of Columns LG
+    category: sizing
+
+  - name: layout-grid-lg__sidebar_close__margin
+    value: '{!layout-grid-lg__sidebar_close__margin}'
+    meta:
+      friendlyName: Margin width LG
+    category: sizing
+
+  - name: layout-grid-lg__sidebar_close__gutter
+    value: '{!layout-grid-lg__sidebar_close__gutter}'
+    meta:
+      friendlyName: Gutter width LG
+    category: sizing
+
+  - name: layout-grid-lg__sidebar_open
+    value: '{!layout-grid-lg__sidebar_open}'
+    meta:
+      friendlyName: Sidebar width LG
+    category: sizing
+
+  - name: layout-grid-lg__sidebar_open__size
+    value: '{!layout-grid-lg__sidebar_open__size}'
+    meta:
+      friendlyName: Maximum Grid width with Sidebar for Media Query LG
+    category: sizing
+  
+  - name: layout-grid-lg__sidebar_open__container
+    value: '{!layout-grid-lg__sidebar_open__container}'
+    meta:
+      friendlyName: Maximum Grid width with Sidebar LG
+    category: sizing
+
+  - name: layout-grid-lg__sidebar_open__columns
+    value: '{!layout-grid-lg__sidebar_open__columns}'
+    meta:
+      friendlyName: Number of Columns with Sidebar LG
+    category: sizing
+
+  - name: layout-grid-lg__sidebar_open__margin
+    value: '{!layout-grid-lg__sidebar_open__margin}'
+    meta:
+      friendlyName: Margin width with Sidebar LG
+    category: sizing
+
+  - name: layout-grid-lg__sidebar_open__gutter
+    value: '{!layout-grid-lg__sidebar_open__gutter}'
+    meta:
+      friendlyName: Gutter width with Sidebar LG
+    category: sizing
+
+  - name: layout-grid-xl__sidebar_close
+    value: '{!layout-grid-xl__sidebar_close}'
+    meta:
+      friendlyName: Maximum Grid width for Media Query XL
+    category: sizing
+
+  - name: layout-grid-xl__sidebar_close__size
+    value: '{!layout-grid-xl__sidebar_close__size}'
+    meta:
+      friendlyName: Maximum Grid width for Media Query XL
+    category: sizing
+  
+  - name: layout-grid-xl__sidebar_close__container
+    value: '{!layout-grid-xl__sidebar_close__container}'
+    meta:
+      friendlyName: Maximum Grid width XL
+    category: sizing
+
+  - name: layout-grid-xl__sidebar_close__columns
+    value: '{!layout-grid-xl__sidebar_close__columns}'
+    meta:
+      friendlyName: Number of Columns XL
+    category: sizing
+
+  - name: layout-grid-xl__sidebar_close__margin
+    value: '{!layout-grid-xl__sidebar_close__margin}'
+    meta:
+      friendlyName: Margin width XL
+    category: sizing
+
+  - name: layout-grid-xl__sidebar_close__gutter
+    value: '{!layout-grid-xl__sidebar_close__gutter}'
+    meta:
+      friendlyName: Gutter width XL
+    category: sizing
+
+  - name: layout-grid-xl__sidebar_open
+    value: '{!layout-grid-xl__sidebar_open}'
+    meta:
+      friendlyName: Sidebar width XL
+    category: sizing
+
+  - name: layout-grid-xl__sidebar_open__size
+    value: '{!layout-grid-xl__sidebar_open__size}'
+    meta:
+      friendlyName: Maximum Grid width with Sidebar for Media Query XL
+    category: sizing
+  
+  - name: layout-grid-xl__sidebar_open__container
+    value: '{!layout-grid-xl__sidebar_open__container}'
+    meta:
+      friendlyName: Maximum Grid width with Sidebar XL
+    category: sizing
+
+  - name: layout-grid-xl__sidebar_open__columns
+    value: '{!layout-grid-xl__sidebar_open__columns}'
+    meta:
+      friendlyName: Number of Columns with Sidebar XL
+    category: sizing
+
+  - name: layout-grid-xl__sidebar_open__margin
+    value: '{!layout-grid-xl__sidebar_open__margin}'
+    meta:
+      friendlyName: Margin width with Sidebar XL
+    category: sizing
+
+  - name: layout-grid-xl__sidebar_open__gutter
+    value: '{!layout-grid-xl__sidebar_open__gutter}'
+    meta:
+      friendlyName: Gutter width with Sidebar XL
+    category: sizing

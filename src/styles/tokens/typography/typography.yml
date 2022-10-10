@@ -1,0 +1,146 @@
+---
+global:
+  type: font-style
+  category: category-font-style
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: font-family-primary
+    value: '{!font-family-primary}'
+    meta:
+      friendlyName: Font Family Primary
+    category: font-family
+
+  - name: font-family-secondary
+    value: '{!font-family-secondary}'
+    meta:
+      friendlyName: Font Family Secondary
+    category: font-family
+
+  - name: font-weight-regular
+    value: '{!font-weight-regular}'
+    meta:
+      friendlyName: Font Weight Regular
+    category: font-weight
+
+  - name: font-weight-medium
+    value: '{!font-weight-medium}'
+    meta:
+      friendlyName: Font Weight Medium
+    category: font-weight
+
+  - name: font-weight-bold
+    value: '{!font-weight-bold}'
+    meta:
+      friendlyName: Font Weight Bold
+    category: font-weight
+
+  - name: font-size-xxs
+    value: '{!font-size-xxs}'
+    meta:
+      friendlyName: Font Size XXS
+    category: font-size
+
+  - name: font-size-xs
+    value: '{!font-size-xs}'
+    meta:
+      friendlyName: Font Size XS
+    category: font-size
+
+  - name: font-size-sm
+    value: '{!font-size-sm}'
+    meta:
+      friendlyName: Font Size SM
+    category: font-size
+
+  - name: font-size-md
+    value: '{!font-size-md}'
+    meta:
+      friendlyName: Font Size MD
+    category: font-size
+
+  - name: font-size-lg
+    value: '{!font-size-lg}'
+    meta:
+      friendlyName: Font Size LG
+    category: font-size
+
+  - name: font-size-xl
+    value: '{!font-size-xl}'
+    meta:
+      friendlyName: Font Size XL
+    category: font-size
+
+  - name: font-size-xxl
+    value: '{!font-size-xxl}'
+    meta:
+      friendlyName: Font Size XXL
+    category: font-size
+
+  - name: font-size-xxxl
+    value: '{!font-size-xxxl}'
+    meta:
+      friendlyName: Font Size XXXL
+    category: font-size
+
+  - name: line-height-display
+    value: '{!line-height-display}'
+    meta:
+      friendlyName: Line Height Display
+    category: line-height
+
+  - name: line-height-heading
+    value: '{!line-height-heading}'
+    meta:
+      friendlyName: Line Height Heading
+    category: line-height
+
+  - name: line-height-short-text
+    value: '{!line-height-short-text}'
+    meta:
+      friendlyName: Line Height Short Text
+    category: line-height
+
+  - name: line-height-long-text
+    value: '{!line-height-long-text}'
+    meta:
+      friendlyName: Line Height Long Text
+    category: line-height
+
+  - name: text-decoration-allcaps
+    value: '{!text-decoration-allcaps}'
+    meta:
+      friendlyName: Text Decoration AllCaps
+    category: font-style
+
+  - name: text-decoration-underline
+    value: '{!text-decoration-underline}'
+    meta:
+      friendlyName: Text Decoration Underline
+    category: font-style
+
+  - name: text-left
+    value: '{!text-left}'
+    meta:
+      friendlyName: Text Align Left
+    category: spacing
+
+  - name: text-right
+    value: '{!text-right}'
+    meta:
+      friendlyName: Text Align Right
+    category: spacing
+
+  - name: text-center
+    value: '{!text-center}'
+    meta:
+      friendlyName: Text Align Center
+    category: spacing
+
+  - name: text-justify
+    value: '{!text-justify}'
+    meta:
+      friendlyName: Text Align Justify
+    category: spacing

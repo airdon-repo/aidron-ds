@@ -1,0 +1,46 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { DataTable } from './DataTable';
+import { users } from './dummy_data';
+
+<Meta
+  title="Core/DataTable/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# DataTable
+Tabelas de dados exibem conjuntos de dados em linhas e colunas.
+
+<Canvas>
+  <DataTable
+    data={users.concat(users)}
+    sort={[{ id: 'id', desc: false }]}
+    dataConfig={[
+      { label: 'ID', value: 'id' },
+      { label: 'Name', value: 'name' },
+      { label: 'Username', value: 'username' },
+      { label: 'Email', value: 'email' },
+      { label: 'Phone', value: 'phone' },
+      { label: 'Website', value: 'website' }
+    ]}
+  />
+</Canvas>
+
+## Anatomia
+* Search bar
+* Filters button
+* Table headers
+* Table row
+* Pagination bar
+
+## Design Tokens
+`$font-size-xs`
+`$font-weight-bold`
+`$spacing-inline-xs`
+`$spacing-inline-md`
+`$spacing-inline-sm`
+`$spacing-stack-md`
+`$border-radius-circle`
+
+## Variações
+* Light Mode.
+* Dark Mode.

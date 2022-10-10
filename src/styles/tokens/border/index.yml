@@ -1,0 +1,5 @@
+imports:
+  - ./width.yml
+  - ./radius.yml
+global:
+  category: border-style

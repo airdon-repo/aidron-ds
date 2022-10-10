@@ -1,0 +1,38 @@
+---
+global:
+  type: opacity
+  category: category-opacity
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: opacity-transparent
+    value: '{!opacity-transparent}'
+    meta:
+      friendlyName: Transparent Opacity
+    category: opacity
+
+  - name: opacity-semi-transparent
+    value: '{!opacity-semi-transparent}'
+    meta:
+      friendlyName: Semi Transparency Opacity
+    category: opacity
+
+  - name: opacity-medium
+    value: '{!opacity-medium}'
+    meta:
+      friendlyName: Medium Opacity
+    category: opacity
+
+  - name: opacity-intense
+    value: '{!opacity-intense}'
+    meta:
+      friendlyName: Intense Opacity
+    category: opacity
+
+  - name: opacity-semi-opaque
+    value: '{!opacity-semi-opaque}'
+    meta:
+      friendlyName: Semi Opaque Transparency
+    category: opacity

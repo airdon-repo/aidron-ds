@@ -1,0 +1,1047 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import LinkTo from "@storybook/addon-links/react";
+import { Caption } from "../components/Core/Caption";
+import { Text } from "../components/Core/Text";
+import { Heading } from "../components/Core/Heading";
+
+<Meta
+  title="Aidron DS/Design Tokens"
+  parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+<style>{`
+  .ds-wrapper {
+    width: calc(100% / 4);
+    display: inline-block;
+    margin: 16px auto;
+  }
+  .ds-wrapper .caption {
+    color: #737373;
+  }
+  .ds-wrapper.radius {
+    width: calc(100% / 6);
+  }
+  .ds-wrapper.color {
+    width: calc(100% / 5);
+  }
+  .ds-wrapper.elevation {
+    width: calc(100% / 3);
+  }
+  .ds-wrapper.spacing {
+    width: calc(100% / 5);
+  }
+  .ds-wrapper.typography {
+    width: 100%;
+    background-color: #FAFAFA;
+    padding: 16px;
+  }
+  .ds-wrapper.typography.line-height > div {
+    background-color: #E6E6E6;
+  }
+  .ds-wrapper.radius > div {
+    border-color: #FF2462;
+    border-style: solid;
+    height: 100px;
+    width: 100px;
+    border-width: 1px;
+  }
+  .ds-wrapper.square > div {
+    width: 100px;
+    height: 100px;
+    background-color: #fafafa;
+    border-color: #FF2462;
+    border-style: solid;
+  }
+  .ds-wrapper.radius > .border-radius-pill {
+    width: 120px;
+  }
+  .ds-wrapper.color > div {
+    width: 100px;
+    height: 100px;
+  }
+  .ds-wrapper.elevation > div {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 16px;
+  }
+  .ds-wrapper.spacing > div {
+    height: 150px;
+    width: 150px;
+    border-color: #E6E6E6;
+    border-style: solid;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ds-wrapper.spacing.stack > div > span, .ds-wrapper.spacing.inline > div > span {
+    width: 100%;
+    display: block;
+    background-color: #24F2FF;
+  }
+  .ds-wrapper.spacing.inline > div > span {
+    background-color: #FF2462;
+  }
+  .ds-wrapper.spacing.inset > div {
+    border-color: #24F2FF;
+  }
+  .ds-wrapper.spacing.squish > div {
+    border-color: #FF2462;
+  }
+  .ds-wrapper.elevation > .caption {
+    padding-right: 16px;
+    word-break: break-word;
+    display: inline-block;
+  }
+  .bg-dark .ds-wrapper.elevation > .caption, .bg-dark .ds-wrapper.color > .caption {
+    color: #fff;
+  }
+`}</style>
+
+# Design Tokens
+
+Design tokens são a menor parte de um Design System, garantindo a mesma comunicação visual, de maneira íntegra e distribuída entre todos os componentes que fazem parte de um sistema.
+
+> A Design System is the single source of truth which groups all the elements that will allow the teams to design, realize and develop a product. [`HACQ, Audrey (UX Collective, 2018)`](https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969)
+
+### Border
+
+#### Width
+
+<div style={{ padding: "16px" }}>
+  <div className="ds-wrapper square">
+    <div className="border-width-none"></div>
+    <Caption>$border-width-none</Caption>
+    <br />
+    <Caption>0px</Caption>
+  </div>
+  <div className="ds-wrapper square">
+    <div className="border-width-sm"></div>
+    <Caption>$border-width-sm</Caption>
+    <br />
+    <Caption>1px</Caption>
+  </div>
+  <div className="ds-wrapper square">
+    <div className="border-width-md"></div>
+    <Caption>$border-width-md</Caption>
+    <br />
+    <Caption>1.5px</Caption>
+  </div>
+  <div className="ds-wrapper square">
+    <div className="border-width-lg"></div>
+    <Caption>$border-width-lg</Caption>
+    <br />
+    <Caption>2px</Caption>
+  </div>
+</div>
+
+#### Radius
+
+<div style={{ padding: "16px" }}>
+  <div className="ds-wrapper radius">
+    <div className="border-radius-none"></div>
+    <Caption>$border-radius-none</Caption>
+    <br />
+    <Caption>0px</Caption>
+  </div>
+  <div className="ds-wrapper radius">
+    <div className="border-radius-sm"></div>
+    <Caption>$border-radius-sm</Caption>
+    <br />
+    <Caption>4px</Caption>
+  </div>
+  <div className="ds-wrapper radius">
+    <div className="border-radius-md"></div>
+    <Caption>$border-radius-md</Caption>
+    <br />
+    <Caption>8px</Caption>
+  </div>
+  <div className="ds-wrapper radius">
+    <div className="border-radius-lg"></div>
+    <Caption>$border-radius-lg</Caption>
+    <br />
+    <Caption>16px</Caption>
+  </div>
+  <div className="ds-wrapper radius">
+    <div className="border-radius-circle"></div>
+    <Caption>$border-radius-circle</Caption>
+    <br />
+    <Caption>50%</Caption>
+  </div>
+  <div className="ds-wrapper radius">
+    <div className="border-radius-pill"></div>
+    <Caption>$border-radius-pill</Caption>
+    <br />
+    <Caption>500px</Caption>
+  </div>
+</div>
+
+### Colors
+
+#### Brand
+
+<div style={{ padding: "16px" }}>
+  <div className="ds-wrapper color">
+    <div className="border-width-none primary-darkest border-radius-circle"></div>
+    <Caption>$primary-darkest</Caption>
+    <br />
+    <Caption>#620409</Caption>
+    <br />
+    <Caption>rgba(98, 4, 9, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none primary-dark border-radius-circle"></div>
+    <Caption>$primary-dark</Caption>
+    <br />
+    <Caption>#9D0F15</Caption>
+    <br />
+    <Caption>rgba(157, 15, 21, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none primary-medium border-radius-circle"></div>
+    <Caption>$primary-medium</Caption>
+    <br />
+    <Caption>#D71920</Caption>
+    <br />
+    <Caption>rgba(215, 25, 32, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none primary-light border-radius-circle"></div>
+    <Caption>$primary-light</Caption>
+    <br />
+    <Caption>#E95B61</Caption>
+    <br />
+    <Caption>rgba(233, 91, 97, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none primary-lightest border-radius-circle"></div>
+    <Caption>$primary-lightest</Caption>
+    <br />
+    <Caption>#FB9DA2</Caption>
+    <br />
+    <Caption>rgba(251, 157, 162, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none secondary-medium border-radius-circle"></div>
+    <Caption>$secondary-medium</Caption>
+    <br />
+    <Caption>#000000</Caption>
+    <br />
+    <Caption>rgba(0, 0, 0, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none tertiary-medium border-radius-circle"></div>
+    <Caption>$tertiary-medium</Caption>
+    <br />
+    <Caption>#BCBEC0</Caption>
+    <br />
+    <Caption>rgba(188, 190, 192, 1)</Caption>
+  </div>
+</div>
+
+#### Neutrals
+
+<div style={{ padding: "16px" }}>
+  <div className="ds-wrapper color">
+    <div className="border-width-none neutral-70 border-radius-circle"></div>
+    <Caption>$neutral-70</Caption>
+    <br />
+    <Caption>#181818</Caption>
+    <br />
+    <Caption>rgba(24, 24, 24, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none neutral-60 border-radius-circle"></div>
+    <Caption>$neutral-60</Caption>
+    <br />
+    <Caption>#262626</Caption>
+    <br />
+    <Caption>rgba(38, 38, 38, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none neutral-50 border-radius-circle"></div>
+    <Caption>$neutral-50</Caption>
+    <br />
+    <Caption>#737373</Caption>
+    <br />
+    <Caption>rgba(115, 115, 115, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none neutral-40 border-radius-circle"></div>
+    <Caption>$neutral-40</Caption>
+    <br />
+    <Caption>#999999</Caption>
+    <br />
+    <Caption>rgba(153, 153, 153, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none neutral-30 border-radius-circle"></div>
+    <Caption>$neutral-30</Caption>
+    <br />
+    <Caption>#BFBFBF</Caption>
+    <br />
+    <Caption>rgba(191, 191, 191, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none neutral-20 border-radius-circle"></div>
+    <Caption>$neutral-20</Caption>
+    <br />
+    <Caption>#E6E6E6</Caption>
+    <br />
+    <Caption>rgba(230, 230, 230, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none neutral-10 border-radius-circle"></div>
+    <Caption>$neutral-10</Caption>
+    <br />
+    <Caption>#FAFAFA</Caption>
+    <br />
+    <Caption>rgba(250, 250, 250, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none neutral-white border-radius-circle"></div>
+    <Caption>$neutral-white</Caption>
+    <br />
+    <Caption>#FFFFFF</Caption>
+    <br />
+    <Caption>rgba(255, 255, 255, 1)</Caption>
+  </div>
+</div>
+
+#### Support
+
+<div style={{ padding: "16px" }}>
+  <div className="ds-wrapper color">
+    <div className="border-width-none red-darkest border-radius-circle"></div>
+    <Caption>$red-darkest</Caption>
+    <br />
+    <Caption>#740021</Caption>
+    <br />
+    <Caption>rgba(116, 0, 33, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none red-dark border-radius-circle"></div>
+    <Caption>$red-dark</Caption>
+    <br />
+    <Caption>#CB003A</Caption>
+    <br />
+    <Caption>rgba(203, 0, 58, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none red-medium border-radius-circle"></div>
+    <Caption>$red-medium</Caption>
+    <br />
+    <Caption>#FF2462</Caption>
+    <br />
+    <Caption>rgba(255, 36, 98, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none red-light border-radius-circle"></div>
+    <Caption>$red-light</Caption>
+    <br />
+    <Caption>#FF6591</Caption>
+    <br />
+    <Caption>rgba(255, 101, 145, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none red-lightest border-radius-circle"></div>
+    <Caption>$red-lightest</Caption>
+    <br />
+    <Caption>#FFA7C0</Caption>
+    <br />
+    <Caption>rgba(255, 167, 192, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none yellow-darkest border-radius-circle"></div>
+    <Caption>$yellow-darkest</Caption>
+    <br />
+    <Caption>#746900</Caption>
+    <br />
+    <Caption>rgba(116, 105, 0, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none yellow-dark border-radius-circle"></div>
+    <Caption>$yellow-dark</Caption>
+    <br />
+    <Caption>#CBB700</Caption>
+    <br />
+    <Caption>rgba(203, 183, 0, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none yellow-medium border-radius-circle"></div>
+    <Caption>$yellow-medium</Caption>
+    <br />
+    <Caption>#FFE924</Caption>
+    <br />
+    <Caption>rgba(255, 233, 36, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none yellow-light border-radius-circle"></div>
+    <Caption>$yellow-light</Caption>
+    <br />
+    <Caption>#FFF065</Caption>
+    <br />
+    <Caption>rgba(255, 240, 101, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none yellow-lightest border-radius-circle"></div>
+    <Caption>$yellow-lightest</Caption>
+    <br />
+    <Caption>#FFF6A7</Caption>
+    <br />
+    <Caption>rgba(255, 246, 167, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none green-darkest border-radius-circle"></div>
+    <Caption>$green-darkest</Caption>
+    <br />
+    <Caption>#00742F</Caption>
+    <br />
+    <Caption>rgba(0, 116, 47, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none green-dark border-radius-circle"></div>
+    <Caption>$green-dark</Caption>
+    <br />
+    <Caption>#00CB51</Caption>
+    <br />
+    <Caption>rgba(0, 203, 81, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none green-medium border-radius-circle"></div>
+    <Caption>$green-medium</Caption>
+    <br />
+    <Caption>#24FF7C</Caption>
+    <br />
+    <Caption>rgba(36, 255, 124, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none green-light border-radius-circle"></div>
+    <Caption>$green-light</Caption>
+    <br />
+    <Caption>#65FFA3</Caption>
+    <br />
+    <Caption>rgba(101, 255, 163, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none green-lightest border-radius-circle"></div>
+    <Caption>$green-lightest</Caption>
+    <br />
+    <Caption>#A7FFCA</Caption>
+    <br />
+    <Caption>rgba(167, 255, 202, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none blue-darkest border-radius-circle"></div>
+    <Caption>$blue-darkest</Caption>
+    <br />
+    <Caption>#006D74</Caption>
+    <br />
+    <Caption>rgba(0, 109, 116, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none blue-dark border-radius-circle"></div>
+    <Caption>$blue-dark</Caption>
+    <br />
+    <Caption>#00BECB</Caption>
+    <br />
+    <Caption>rgba(0, 190, 203, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none blue-medium border-radius-circle"></div>
+    <Caption>$blue-medium</Caption>
+    <br />
+    <Caption>#24F2FF</Caption>
+    <br />
+    <Caption>rgba(36, 242, 255, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none blue-light border-radius-circle"></div>
+    <Caption>$blue-light</Caption>
+    <br />
+    <Caption>#65F5FF</Caption>
+    <br />
+    <Caption>rgba(101, 245, 255, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none blue-lightest border-radius-circle"></div>
+    <Caption>$blue-lightest</Caption>
+    <br />
+    <Caption>#A7F9FF</Caption>
+    <br />
+    <Caption>rgba(167, 249, 255, 1)</Caption>
+  </div>
+</div>
+
+### Elevation
+
+#### Light
+
+<div style={{ display: "flex", padding: "16px" }}>
+  <div className="ds-wrapper elevation">
+    <div className="elevation-level-light-1 neutral-white border-radius-sm"></div>
+    <Caption>$elevation-level-1-light</Caption>
+    <Caption>
+      Uso default em componentes que precisam se sobresair aos demais elementos
+      da tela.
+    </Caption>
+    <Caption>
+      X = 0<br />
+      Y = 4<br />
+      Blur = 8<br />
+      Spread = 0<br />
+      Color = $secondary-medium
+      <br />
+      Alpha = 4%
+    </Caption>
+  </div>
+  <div className="ds-wrapper elevation">
+    <div className="elevation-level-light-2 neutral-white border-radius-sm"></div>
+    <Caption>$elevation-level-2-light</Caption>
+    <Caption>Usado para o hover de alguns componentes de interação.</Caption>
+    <Caption>
+      X = 0<br />
+      Y = 4<br />
+      Blur = 24
+      <br />
+      Spread = 0<br />
+      Color = $secondary-medium
+      <br />
+      Alpha = 8%
+    </Caption>
+  </div>
+  <div className="ds-wrapper elevation">
+    <div className="elevation-level-light-3 neutral-white border-radius-sm"></div>
+    <Caption>$elevation-level-3-light</Caption>
+    <Caption>
+      Usado para componentes que precisam se sobresair totalmente aos demais
+      elementos da tela.
+    </Caption>
+    <Caption>
+      X = 0<br />
+      Y = 4<br />
+      Blur = 48
+      <br />
+      Spread = 0<br />
+      Color = $secondary-medium
+      <br />
+      Alpha = 16%
+    </Caption>
+  </div>
+</div>
+
+#### Dark
+
+<div
+  className="bg-dark neutral-60 border-radius-sm"
+  style={{ display: "flex", padding: "16px" }}
+>
+  <div className="ds-wrapper elevation">
+    <div className="elevation-level-dark-1 neutral-60 border-radius-sm"></div>
+    <Caption>$elevation-level-1-dark</Caption>
+    <Caption>
+      Uso default em componentes que precisam se sobresair aos demais elementos
+      da tela.
+    </Caption>
+    <Caption>
+      X = 0<br />
+      Y = 4<br />
+      Blur = 24
+      <br />
+      Spread = 0<br />
+      Color = $secondary-medium
+      <br />
+      Alpha = 24%
+    </Caption>
+  </div>
+  <div className="ds-wrapper elevation">
+    <div className="elevation-level-dark-2 neutral-60 border-radius-sm"></div>
+    <Caption>$elevation-level-2-dark</Caption>
+    <Caption>Usado para o hover de alguns componentes de interação.</Caption>
+    <Caption>
+      X = 0<br />
+      Y = 4<br />
+      Blur = 24
+      <br />
+      Spread = 0<br />
+      Color = $secondary-medium
+      <br />
+      Alpha = 48%
+    </Caption>
+  </div>
+  <div className="ds-wrapper elevation">
+    <div className="elevation-level-dark-3 neutral-60 border-radius-sm"></div>
+    <Caption>$elevation-level-3-dark</Caption>
+    <Caption>
+      Usado para componentes que precisam se sobresair totalmente aos demais
+      elementos da tela.
+    </Caption>
+    <Caption>
+      X = 0<br />
+      Y = 4<br />
+      Blur = 48
+      <br />
+      Spread = 0<br />
+      Color = $secondary-medium
+      <br />
+      Alpha = 96%
+    </Caption>
+  </div>
+</div>
+
+### Opacity
+
+#### Light
+
+<div style={{ display: "flex", padding: "16px" }}>
+  <div className="ds-wrapper color">
+    <div className="border-width-none opacity-light-transparent border-radius-circle"></div>
+    <Caption>$opacity-light-transparent</Caption>
+    <br />
+    <Caption>8% $neutral-70</Caption>
+    <br />
+    <Caption>#EDEDED</Caption>
+    <br />
+    <Caption>rgba(237, 237, 237, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none opacity-light-semi-transparent border-radius-circle"></div>
+    <Caption>$opacity-light-semi-transparent</Caption>
+    <br />
+    <Caption>16% $neutral-70</Caption>
+    <br />
+    <Caption>#DADADA</Caption>
+    <br />
+    <Caption>rgba(218, 218, 218, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none opacity-light-medium border-radius-circle"></div>
+    <Caption>$opacity-light-medium</Caption>
+    <br />
+    <Caption>32% $neutral-70</Caption>
+    <br />
+    <Caption>#B5B5B5</Caption>
+    <br />
+    <Caption>rgba(181, 181, 181, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none opacity-light-intense border-radius-circle"></div>
+    <Caption>$opacity-light-intense</Caption>
+    <br />
+    <Caption>64% $neutral-70</Caption>
+    <br />
+    <Caption>#6B6B6B</Caption>
+    <br />
+    <Caption>rgba(107, 107, 107, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none opacity-light-semi-opaque border-radius-circle"></div>
+    <Caption>$opacity-light-semi-opaque</Caption>
+    <br />
+    <Caption>80% $neutral-70</Caption>
+    <br />
+    <Caption>#464646</Caption>
+    <br />
+    <Caption>rgba(70, 70, 70, 1)</Caption>
+  </div>
+</div>
+
+#### Dark
+
+<div
+  className="bg-dark neutral-60 border-radius-sm"
+  style={{ display: "flex", padding: "16px" }}
+>
+  <div className="ds-wrapper color">
+    <div className="border-width-none opacity-dark-transparent border-radius-circle"></div>
+    <Caption>$opacity-dark-transparent</Caption>
+    <br />
+    <Caption>8% $neutral-70</Caption>
+    <br />
+    <Caption>#EDEDED</Caption>
+    <br />
+    <Caption>rgba(237, 237, 237, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none opacity-dark-semi-transparent border-radius-circle"></div>
+    <Caption>$opacity-dark-semi-transparent</Caption>
+    <br />
+    <Caption>16% $neutral-70</Caption>
+    <br />
+    <Caption>#DADADA</Caption>
+    <br />
+    <Caption>rgba(218, 218, 218, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none opacity-dark-medium border-radius-circle"></div>
+    <Caption>$opacity-dark-medium</Caption>
+    <br />
+    <Caption>32% $neutral-70</Caption>
+    <br />
+    <Caption>#B5B5B5</Caption>
+    <br />
+    <Caption>rgba(181, 181, 181, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none opacity-dark-intense border-radius-circle"></div>
+    <Caption>$opacity-dark-intense</Caption>
+    <br />
+    <Caption>64% $neutral-70</Caption>
+    <br />
+    <Caption>#6B6B6B</Caption>
+    <br />
+    <Caption>rgba(107, 107, 107, 1)</Caption>
+  </div>
+  <div className="ds-wrapper color">
+    <div className="border-width-none opacity-dark-semi-opaque border-radius-circle"></div>
+    <Caption>$opacity-dark-semi-opaque</Caption>
+    <br />
+    <Caption>80% $neutral-70</Caption>
+    <br />
+    <Caption>#464646</Caption>
+    <br />
+    <Caption>rgba(70, 70, 70, 1)</Caption>
+  </div>
+</div>
+
+### Spacing
+
+#### Stack
+
+Para empilhar verticalmente componentes e caixas de texto. Usado em paddings e margins.
+
+<div className="ds-wrapper spacing stack">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ height: "2px" }} />
+  </div>
+  <Caption>$spacing-stack-xxxs</Caption>
+  <br />
+  <Caption>2px</Caption>
+</div>
+<div className="ds-wrapper spacing stack">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ height: "4px" }} />
+  </div>
+  <Caption>$spacing-stack-xxs</Caption>
+  <br />
+  <Caption>4px</Caption>
+</div>
+<div className="ds-wrapper spacing stack">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ height: "8px" }} />
+  </div>
+  <Caption>$spacing-stack-xs</Caption>
+  <br />
+  <Caption>8px</Caption>
+</div>
+<div className="ds-wrapper spacing stack">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ height: "16px" }} />
+  </div>
+  <Caption>$spacing-stack-sm</Caption>
+  <br />
+  <Caption>16px</Caption>
+</div>
+<div className="ds-wrapper spacing stack">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ height: "24px" }} />
+  </div>
+  <Caption>$spacing-stack-md</Caption>
+  <br />
+  <Caption>24px</Caption>
+</div>
+<div className="ds-wrapper spacing stack">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ height: "32px" }} />
+  </div>
+  <Caption>$spacing-stack-lg</Caption>
+  <br />
+  <Caption>32px</Caption>
+</div>
+<div className="ds-wrapper spacing stack">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ height: "64px" }} />
+  </div>
+  <Caption>$spacing-stack-xl</Caption>
+  <br />
+  <Caption>64px</Caption>
+</div>
+<div className="ds-wrapper spacing stack">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ height: "96px" }} />
+  </div>
+  <Caption>$spacing-stack-xxl</Caption>
+  <br />
+  <Caption>96px</Caption>
+</div>
+<div className="ds-wrapper spacing stack">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ height: "128px" }} />
+  </div>
+  <Caption>$spacing-stack-xxxl</Caption>
+  <br />
+  <Caption>128px</Caption>
+</div>
+
+#### Inline
+
+Para espaçar horizontalmente componentes e caixas de texto. Usado em paddings e margins.
+
+<div className="ds-wrapper spacing inline">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ width: "2px", height: "100%" }} />
+  </div>
+  <Caption>$spacing-inline-xxxs</Caption>
+  <br />
+  <Caption>2px</Caption>
+</div>
+<div className="ds-wrapper spacing inline">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ width: "4px", height: "100%" }} />
+  </div>
+  <Caption>$spacing-inline-xxs</Caption>
+  <br />
+  <Caption>4px</Caption>
+</div>
+<div className="ds-wrapper spacing inline">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ width: "8px", height: "100%" }} />
+  </div>
+  <Caption>$spacing-inline-xs</Caption>
+  <br />
+  <Caption>8px</Caption>
+</div>
+<div className="ds-wrapper spacing inline">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ width: "16px", height: "100%" }} />
+  </div>
+  <Caption>$spacing-inline-sm</Caption>
+  <br />
+  <Caption>16px</Caption>
+</div>
+<div className="ds-wrapper spacing inline">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ width: "24px", height: "100%" }} />
+  </div>
+  <Caption>$spacing-inline-md</Caption>
+  <br />
+  <Caption>24px</Caption>
+</div>
+<div className="ds-wrapper spacing inline">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ width: "32px", height: "100%" }} />
+  </div>
+  <Caption>$spacing-inline-lg</Caption>
+  <br />
+  <Caption>32px</Caption>
+</div>
+<div className="ds-wrapper spacing inline">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ width: "64px", height: "100%" }} />
+  </div>
+  <Caption>$spacing-inline-xl</Caption>
+  <br />
+  <Caption>64px</Caption>
+</div>
+<div className="ds-wrapper spacing inline">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ width: "96px", height: "100%" }} />
+  </div>
+  <Caption>$spacing-inline-xxl</Caption>
+  <br />
+  <Caption>96px</Caption>
+</div>
+<div className="ds-wrapper spacing inline">
+  <div className="border-width-sm border-radius-sm">
+    <span style={{ width: "128px", height: "100%" }} />
+  </div>
+  <Caption>$spacing-inline-xxxl</Caption>
+  <br />
+  <Caption>128px</Caption>
+</div>
+
+#### Inset
+
+Usado em paddings e margins.
+
+<div className="ds-wrapper spacing inset">
+  <div className="border-radius-sm" style={{ borderWidth: "2px" }}></div>
+  <Caption>$spacing-inset-xxxs</Caption>
+  <br />
+  <Caption>2px</Caption>
+</div>
+<div className="ds-wrapper spacing inset">
+  <div className="border-radius-sm" style={{ borderWidth: "4px" }}></div>
+  <Caption>$spacing-inset-xxs</Caption>
+  <br />
+  <Caption>4px</Caption>
+</div>
+<div className="ds-wrapper spacing inset">
+  <div className="border-radius-sm" style={{ borderWidth: "8px" }}></div>
+  <Caption>$spacing-inset-xs</Caption>
+  <br />
+  <Caption>8px</Caption>
+</div>
+<div className="ds-wrapper spacing inset">
+  <div className="border-radius-sm" style={{ borderWidth: "16px" }}></div>
+  <Caption>$spacing-inset-sm</Caption>
+  <br />
+  <Caption>16px</Caption>
+</div>
+<div className="ds-wrapper spacing inset">
+  <div className="border-radius-sm" style={{ borderWidth: "24px" }}></div>
+  <Caption>$spacing-inset-md</Caption>
+  <br />
+  <Caption>24px</Caption>
+</div>
+<div className="ds-wrapper spacing inset">
+  <div className="border-radius-sm" style={{ borderWidth: "32px" }}></div>
+  <Caption>$spacing-inset-lg</Caption>
+  <br />
+  <Caption>32px</Caption>
+</div>
+<div className="ds-wrapper spacing inset">
+  <div className="border-radius-sm" style={{ borderWidth: "64px" }}></div>
+  <Caption>$spacing-inset-xl</Caption>
+  <br />
+  <Caption>64px</Caption>
+</div>
+
+#### Squish
+
+Usado em paddings e margins.
+
+<div className="ds-wrapper spacing squish">
+  <div className="border-radius-sm" style={{ borderWidth: "2px 4px" }}></div>
+  <Caption>$spacing-squish-xxxs</Caption>
+  <br />
+  <Caption>2px 4px</Caption>
+</div>
+<div className="ds-wrapper spacing squish">
+  <div className="border-radius-sm" style={{ borderWidth: "4px 8px" }}></div>
+  <Caption>$spacing-squish-xxs</Caption>
+  <br />
+  <Caption>4px 8px</Caption>
+</div>
+<div className="ds-wrapper spacing squish">
+  <div className="border-radius-sm" style={{ borderWidth: "8px 16px" }}></div>
+  <Caption>$spacing-squish-xs</Caption>
+  <br />
+  <Caption>8px 16px</Caption>
+</div>
+<div className="ds-wrapper spacing squish">
+  <div className="border-radius-sm" style={{ borderWidth: "16px 24px" }}></div>
+  <Caption>$spacing-squish-sm</Caption>
+  <br />
+  <Caption>16px 24px</Caption>
+</div>
+<div className="ds-wrapper spacing squish">
+  <div className="border-radius-sm" style={{ borderWidth: "24px 32px" }}></div>
+  <Caption>$spacing-squish-md</Caption>
+  <br />
+  <Caption>24px 32px</Caption>
+</div>
+<div className="ds-wrapper spacing squish">
+  <div className="border-radius-sm" style={{ borderWidth: "32px 64px" }}></div>
+  <Caption>$spacing-squish-lg</Caption>
+  <br />
+  <Caption>32px 64px</Caption>
+</div>
+
+### Typography
+
+#### Font Family
+
+A Hurme Geometric Sans 4 é a fonte que utilizamos para os títulos e a Lato para o restante dos textos. Caso nenhuma das duas fontes possa ser usada, utiliza-se a padrão do sistema operacional.
+
+<div className="ds-wrapper typography border-radius-sm">
+  <Heading size="md">Hurme Geometric Sans 4</Heading>
+  <Caption>$font-family-primary = HurmeGeometric</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm">
+  <Text>Lato</Text>
+  <br />
+  <Caption>$font-family-secondary = LatoSans</Caption>
+</div>
+
+#### Font Weight
+
+<div className="ds-wrapper typography border-radius-sm">
+  <Text weight="regular">Regular</Text>
+  <Caption>$font-weight-regular = 400</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm">
+  <Text weight="bold">Bold</Text>
+  <Caption>$font-weight-bold = 700</Caption>
+</div>
+
+#### Font Size
+
+A hierarquia tipográfica do DataLab foi definida a partir da proporção de 1.250 - também conhecida como Major Third - a partir de um tamanho base de 16px (16px = 1em). Construída dessa forma, a escala tipográfica dispõe de contraste e harmonia entre cada intervalo.
+
+<div className="ds-wrapper typography border-radius-sm">
+  <Heading size="display">Lorem Ipsum Dolor Sit Amet</Heading>
+  <Caption>$font-size-xxxl = 48.83px</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm">
+  <Heading size="xl">Lorem Ipsum Dolor Sit Amet</Heading>
+  <Caption>$font-size-xxl = 39.06px</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm">
+  <Heading size="lg">Lorem Ipsum Dolor Sit Amet</Heading>
+  <Caption>$font-size-xl = 31.25px</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm">
+  <Heading size="md">Lorem Ipsum Dolor Sit Amet</Heading>
+  <Caption>$font-size-lg = 25px</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm">
+  <Heading size="sm">Lorem Ipsum Dolor Sit Amet</Heading>
+  <Caption>$font-size-md = 20px</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm">
+  <Text size="sm">Lorem Ipsum Dolor Sit Amet</Text>
+  <Caption>$font-size-sm = 16px</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm">
+  <Text size="xs">Lorem Ipsum Dolor Sit Amet</Text>
+  <Caption>$font-size-xs = 12.80px</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm">
+  <Text size="xxs">Lorem Ipsum Dolor Sit Amet</Text>
+  <Caption>$font-size-xxs = 10.24px</Caption>
+</div>
+
+#### Line Height
+
+<div className="ds-wrapper typography border-radius-sm line-height">
+  <div className="line-height-display">Lorem Ipsum Dolor Sit Amet</div>
+  <Caption>$line-height-display = 160%</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm line-height">
+  <div className="line-height-heading">Lorem Ipsum Dolor Sit Amet</div>
+  <Caption>$line-height-heading = 140%</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm line-height">
+  <div className="line-height-short-text">Lorem Ipsum Dolor Sit Amet</div>
+  <Caption>$line-height-short-text = 150%</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm line-height">
+  <div className="line-height-long-text">Lorem Ipsum Dolor Sit Amet</div>
+  <Caption>$line-height-long-text = 150%</Caption>
+</div>
+
+#### Text Decoration
+
+<div className="ds-wrapper typography border-radius-sm line-height">
+  <Heading size="sm" allcaps>
+    Lorem Ipsum Dolor Sit Amet
+  </Heading>
+  <Caption>$text-decoration-allcaps = uppercase</Caption>
+</div>
+<div className="ds-wrapper typography border-radius-sm line-height">
+  <Heading size="sm" className="text-decoration-underline">
+    Lorem Ipsum Dolor Sit Amet
+  </Heading>
+  <Caption>$text-decoration-underline = underline</Caption>
+</div>

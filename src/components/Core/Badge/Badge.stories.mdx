@@ -1,0 +1,45 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Badge } from './Badge';
+
+<Meta
+  title="Core/Badge/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Badge
+Servem para contar ou demarcar determinada informação. Normalmente apoia outro elemento visual.
+
+<Canvas>
+  <div>
+    {['danger', 'warning', 'success', 'information', 'disabled'].map(x => (
+      <Badge variant={x}>
+        {x}
+      </Badge>
+    ))}
+  </div>
+  <div>
+    {['danger', 'warning', 'success', 'information', 'disabled'].map(x => (
+      <Badge size="sm" variant={x}>
+        {x}
+      </Badge>
+    ))}
+  </div>
+</Canvas>
+
+## Anatomia
+* Container.
+* Label.
+
+## Design Tokens
+`$spacing-inline-xs`
+`$spacing-inline-xxs`
+`$spacing-stack-xs`
+`$spacing-stack-xxs`
+
+## Variações
+* danger.
+* warning.
+* success.
+* information.
+* disabled.
+* Tamanho.

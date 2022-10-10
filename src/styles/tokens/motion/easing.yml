@@ -1,0 +1,32 @@
+---
+global:
+  type: ease
+  category: category-ease
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: motion-ease-default
+    value: '{!motion-ease-default}'
+    meta:
+      friendlyName: Easing Default
+    category: ease
+
+  - name: motion-ease-out
+    value: '{!motion-ease-out}'
+    meta:
+      friendlyName: Easing Out
+    category: ease
+
+  - name: motion-ease-in
+    value: '{!motion-ease-in}'
+    meta:
+      friendlyName: Easing In
+    category: ease
+
+  - name: motion-ease-error
+    value: '{!motion-ease-error}'
+    meta:
+      friendlyName: Easing Error
+    category: ease

@@ -1,0 +1,26 @@
+---
+global:
+  type: border-style
+  category: category-border
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: border-width-none
+    value: '{!border-width-none}'
+    meta:
+      friendlyName: No Border
+    category: border-width
+
+  - name: border-width-sm
+    value: '{!border-width-sm}'
+    meta:
+      friendlyName: Border Small
+    category: border-width
+
+  - name: border-width-md
+    value: '{!border-width-md}'
+    meta:
+      friendlyName: Border Medium
+    category: border-width

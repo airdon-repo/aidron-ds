@@ -1,0 +1,91 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { NavBar } from './NavBar';
+import { NavBrand } from './NavBrand';
+import Logo from './datalab-logo-light';
+import { Button } from '../Button';
+import { Icon } from '../Icon';
+
+<Meta
+  title="Core/NavBar/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# NavBar
+A NavBar fornece conteúdo e ações relacionadas à tela atual. É usado para branding, títulos de tela, navegação e ações. Ele pode se transformar em uma barra de ação contextual.
+
+<Canvas>
+  <NavBar home>
+    <NavBrand
+      home
+      backLabel="voltar"
+      brandName="Datalab"
+    >
+      <Logo />
+    </NavBrand>
+    <div className="content">
+      <Button
+        onClick={() => {}}
+      >
+        Item
+      </Button>
+      <Button
+        onClick={() => {}}
+      >
+        Item
+      </Button>
+      <Button
+        onClick={() => {}}
+      >
+        Item
+      </Button>
+      <Button
+        onClick={() => {}}
+      >
+        Item
+      </Button>
+      <Button
+        onClick={() => {}}
+      >
+        Item
+      </Button>
+    </div>
+    <div className="actions">
+      <a href="#" className="color-neutral-white" ariaLabel="Share">
+        <Icon
+          icon="share-2"
+        />
+        <span className="visually-hidden">Share</span>
+      </a>
+      <a href="#" className="color-neutral-white" ariaLabel="Help">
+        <Icon
+          icon="help-circle"
+        />
+        <span className="visually-hidden">Help</span>
+      </a>
+      <a href="#" className="color-neutral-white" ariaLabel="Alerts">
+        <Icon
+          icon="bell"
+        />
+        <span className="visually-hidden">Alerts</span>
+      </a>
+    </div>
+  </NavBar>
+</Canvas>
+
+## Anatomia
+* Leading Icon (opcional)
+* Avatar (opcional)
+* Label
+* Trailing Icon (opcional)
+* Description (opcional)
+
+## Design Tokens
+`$spacing-stack-sm`
+`$spacing-inline-sm`
+`$font-size-xs`
+`$border-radius-sm`
+`$border-radius-pill`
+
+## Variações
+* Light Mode.
+* Dark Mode.

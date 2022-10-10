@@ -1,0 +1,42 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Snackbar } from './Snackbar';
+import { Text } from '../Text';
+
+<Meta
+  title="Core/Snackbar/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Snackbar
+A snackbar é utilizada como feedback para ações e eventos do sistema. Seu conteúdo pode incluir textos de sucesso, aviso, informação ou erro.
+
+<Canvas>
+  <Snackbar
+    action={<span>Longer Action Text</span>}
+    isOpen
+    onColapse={() => {}}
+  >
+    <Text>
+      Lorem Ipsum Dolor Sit Amet
+    </Text>
+  </Snackbar>
+</Canvas>
+
+## Anatomia
+* Container
+* Text
+* Action (Opcional)
+
+
+## Design Tokens
+`$spacing-inset-xs`
+`$spacing-inline-sm`
+`$spacing-stack-xs`
+`$border-radius-sm`
+`$elevation-level-light-3`
+`$elevation-level-dark-3`
+
+## Variações
+* Light Mode.
+* Dark Mode.
+* Variant

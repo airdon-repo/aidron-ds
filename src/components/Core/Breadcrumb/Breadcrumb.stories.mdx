@@ -1,0 +1,35 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Breadcrumb, BreadcrumbItem } from './Breadcrumb';
+
+<Meta
+  title="Core/Breadcrumb/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Breadcrumb
+Revela a localização do usuário em um site ou aplicativo.
+
+<Canvas>
+  <Breadcrumb>
+    <BreadcrumbItem path="#">Initial</BreadcrumbItem>
+    <BreadcrumbItem path="#">Level 1</BreadcrumbItem>
+    <BreadcrumbItem path="#">Level 2</BreadcrumbItem>
+    <BreadcrumbItem path="#">Level 3</BreadcrumbItem>
+    <BreadcrumbItem path="#">Level 4</BreadcrumbItem>
+    <BreadcrumbItem active>Level 5</BreadcrumbItem>
+  </Breadcrumb>
+</Canvas>
+
+## Anatomia
+* Página Inicial.
+* Niveis.
+
+<!-- ## Design Tokens
+`$spacing-inline-xs`
+`$spacing-inline-xxs`
+`$spacing-stack-xs`
+`$spacing-stack-xxs` -->
+
+## Variações
+* Light Mode.
+* Dark Mode.

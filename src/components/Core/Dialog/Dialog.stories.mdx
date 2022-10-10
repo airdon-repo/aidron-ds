@@ -1,0 +1,73 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Dialog } from './Dialog';
+import { Button } from '../Button';
+import { Heading } from '../Heading';
+import { Text } from '../Text';
+
+<Meta
+  title="Core/Dialog/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+<style>{`
+  div.bg-light {
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 60px 0;
+  }
+  div.bg-light > div {
+    display: flex;
+    height: 150px;
+    text-align: left;
+  }
+  div.bg-light > div > .dialog-wrapper .dialog {
+    top: 30px;
+    bottom: 30px;
+  }
+`}</style>
+
+# Dialog
+Os Dialogs informam os usuários sobre uma tarefa e podem conter informações críticas, exigir decisões ou envolver várias tarefas. 
+
+<div class="bg-light">
+  <div>
+    <Dialog
+      actions={[
+        <Button label="Action" size="lg"/>,
+        <Button label="Cancel" size="lg" type="outlined"/>,
+        <Button label="Cancel Harder" size="lg" type="ghost"/>
+      ]}
+      open
+      width="500px"
+    >
+      <Heading
+        className="no-m"
+        size="md"
+      >
+        Title
+      </Heading>
+      <Text>
+        Lorem Ipsum Dolor Sit Amet
+      </Text>
+    </Dialog>
+  </div>
+</div>
+
+## Anatomia
+* Container
+* Content
+* Actions
+
+## Design Tokens
+`$elevation-level-light-3`
+`$elevation-level-dark-3`
+`$border-radius-sm`
+`$spacing-stack-md`
+`$spacing-inset-md`
+`$spacing-inline-sm`
+
+## Variações
+* Light Mode.
+* Dark Mode.

@@ -1,0 +1,50 @@
+---
+global:
+  type: time
+  category: category-time
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: motion-duration-fast-1
+    value: '{!motion-duration-fast-1}'
+    meta:
+      friendlyName: Fast Animation 1
+    category: time
+
+  - name: motion-duration-fast-2
+    value: '{!motion-duration-fast-2}'
+    meta:
+      friendlyName: Fast Animation 2
+    category: time
+
+  - name: motion-duration-fast-3
+    value: '{!motion-duration-fast-3}'
+    meta:
+      friendlyName: Fast Animation 3
+    category: time
+
+  - name: motion-duration-moderate-1
+    value: '{!motion-duration-moderate-1}'
+    meta:
+      friendlyName: Moderate Animation 1
+    category: time
+
+  - name: motion-duration-moderate-2
+    value: '{!motion-duration-moderate-2}'
+    meta:
+      friendlyName: Moderate Animation 2
+    category: time
+
+  - name: motion-duration-slow-1
+    value: '{!motion-duration-slow-1}'
+    meta:
+      friendlyName: Slow Animation 1
+    category: time
+
+  - name: motion-duration-slow-2
+    value: '{!motion-duration-slow-2}'
+    meta:
+      friendlyName: Slow Animation 2
+    category: time

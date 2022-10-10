@@ -1,0 +1,243 @@
+---
+global:
+  type: color
+  category: category-color
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: primary-medium
+    value: '{!primary-medium}'
+    meta:
+      friendlyName: Color Brand Primary Medium
+    category: background-color
+
+  - name: primary-dark
+    value: '{!primary-dark}'
+    meta:
+      friendlyName: Color Brand Primary Dark
+    category: background-color
+
+  - name: primary-darkest
+    value: '{!primary-darkest}'
+    meta:
+      friendlyName: Color Brand Primary Darkest
+    category: background-color
+
+  - name: primary-light
+    value: '{!primary-light}'
+    meta:
+      friendlyName: Color Brand Primary Light
+    category: background-color
+
+  - name: primary-lightest
+    value: '{!primary-lightest}'
+    meta:
+      friendlyName: Color Brand Primary Lightest
+    category: background-color
+
+  - name: secondary-medium
+    value: '{!secondary-medium}'
+    meta:
+      friendlyName: Color Brand Secondary Medium
+    category: background-color
+
+  - name: secondary-dark
+    value: '{!secondary-dark}'
+    meta:
+      friendlyName: Color Brand Secondary Dark
+    category: background-color
+
+  - name: secondary-darkest
+    value: '{!secondary-darkest}'
+    meta:
+      friendlyName: Color Brand Secondary Darkest
+    category: background-color
+
+  - name: secondary-light
+    value: '{!secondary-light}'
+    meta:
+      friendlyName: Color Brand Secondary Light
+    category: background-color
+
+  - name: secondary-lightest
+    value: '{!secondary-lightest}'
+    meta:
+      friendlyName: Color Brand Secondary Lightest
+    category: background-color
+
+  - name: tertiary-medium
+    value: '{!tertiary-medium}'
+    meta:
+      friendlyName: Color Brand Tertiary Medium
+    category: background-color
+
+  - name: tertiary-dark
+    value: '{!tertiary-dark}'
+    meta:
+      friendlyName: Color Brand Tertiary Dark
+    category: background-color
+
+  - name: tertiary-darkest
+    value: '{!tertiary-darkest}'
+    meta:
+      friendlyName: Color Brand Tertiary Darkest
+    category: background-color
+
+  - name: tertiary-light
+    value: '{!tertiary-light}'
+    meta:
+      friendlyName: Color Brand Tertiary Light
+    category: background-color
+
+  - name: tertiary-lightest
+    value: '{!tertiary-lightest}'
+    meta:
+      friendlyName: Color Brand Tertiary Lightest
+    category: background-color
+
+  - name: color-primary-medium
+    value: '{!color-primary-medium}'
+    meta:
+      friendlyName: Color Brand Primary Medium
+    category: color
+
+  - name: color-primary-dark
+    value: '{!color-primary-dark}'
+    meta:
+      friendlyName: Color Brand Primary Dark
+    category: color
+
+  - name: color-primary-darkest
+    value: '{!color-primary-darkest}'
+    meta:
+      friendlyName: Color Brand Primary Darkest
+    category: color
+
+  - name: color-primary-light
+    value: '{!color-primary-light}'
+    meta:
+      friendlyName: Color Brand Primary Light
+    category: color
+
+  - name: color-primary-lightest
+    value: '{!color-primary-lightest}'
+    meta:
+      friendlyName: Color Brand Primary Lightest
+    category: color
+
+  - name: color-secondary-medium
+    value: '{!color-secondary-medium}'
+    meta:
+      friendlyName: Color Brand Secondary Medium
+    category: color
+
+  - name: color-tertiary-medium
+    value: '{!color-tertiary-medium}'
+    meta:
+      friendlyName: Color Brand Tertiary Medium
+    category: color
+
+
+  - name: border-primary-medium
+    value: '{!border-primary-medium}'
+    meta:
+      friendlyName: Border Brand Primary Medium
+    category: border
+
+  - name: border-primary-dark
+    value: '{!border-primary-dark}'
+    meta:
+      friendlyName: Border Brand Primary Dark
+    category: border
+
+  - name: border-primary-darkest
+    value: '{!border-primary-darkest}'
+    meta:
+      friendlyName: Border Brand Primary Darkest
+    category: border
+
+  - name: border-primary-light
+    value: '{!border-primary-light}'
+    meta:
+      friendlyName: Border Brand Primary Light
+    category: border
+
+  - name: border-primary-lightest
+    value: '{!border-primary-lightest}'
+    meta:
+      friendlyName: Border Brand Primary Lightest
+    category: border
+
+  - name: border-secondary-medium
+    value: '{!border-secondary-medium}'
+    meta:
+      friendlyName: Border Brand Secondary Medium
+    category: border
+
+  - name: border-tertiary-medium
+    value: '{!border-tertiary-medium}'
+    meta:
+      friendlyName: Border Brand Tertiary Medium
+    category: border
+
+  - name: opacity-light-transparent
+    value: '{!opacity-light-transparent}'
+    meta:
+      friendlyName: Brand Opacity Light Transparent
+    category: background-color
+
+  - name: opacity-light-semi-transparent
+    value: '{!opacity-light-semi-transparent}'
+    meta:
+      friendlyName: Brand Opacity Light Semi Transparent
+    category: background-color
+
+  - name: opacity-light-medium
+    value: '{!opacity-light-medium}'
+    meta:
+      friendlyName: Brand Opacity Light Medium
+    category: background-color
+
+  - name: opacity-light-intense
+    value: '{!opacity-light-intense}'
+    meta:
+      friendlyName: Brand Opacity Light Intense
+    category: background-color
+
+  - name: opacity-light-semi-opaque
+    value: '{!opacity-light-semi-opaque}'
+    meta:
+      friendlyName: Brand Opacity Light Semi Opaque
+    category: background-color
+
+  - name: opacity-dark-transparent
+    value: '{!opacity-dark-transparent}'
+    meta:
+      friendlyName: Brand Opacity Dark Transparent
+    category: background-color
+
+  - name: opacity-dark-semi-transparent
+    value: '{!opacity-dark-semi-transparent}'
+    meta:
+      friendlyName: Brand Opacity Dark Semi Transparent
+    category: background-color
+
+  - name: opacity-dark-medium
+    value: '{!opacity-dark-medium}'
+    meta:
+      friendlyName: Brand Opacity Dark Medium
+    category: background-color
+
+  - name: opacity-dark-intense
+    value: '{!opacity-dark-intense}'
+    meta:
+      friendlyName: Brand Opacity Dark Intense
+    category: background-color
+
+  - name: opacity-dark-semi-opaque
+    value: '{!opacity-dark-semi-opaque}'
+    meta:
+      friendlyName: Brand Opacity Dark Semi Opaque
+    category: background-color

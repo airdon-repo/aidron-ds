@@ -1,0 +1,69 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { TextField } from './TextField';
+import { Icon } from '../Icon';
+
+<Meta
+  title="Core/TextField/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# TextField
+Text fields possibilitam que usuários insiram textos em uma interface.
+
+<Canvas>
+  <TextField
+    onChange={() => {}}
+  />
+  <TextField
+    iconLeft="zap"
+    onChange={() => {}}
+    value="Input text"
+  />
+  <TextField
+    iconRight="chevron-down"
+    onChange={() => {}}
+    value="Input text"
+  />
+  <TextField
+    help={<><Icon icon="zap" size={12} style={{paddingRight: '4px'}}/>help text.</>}
+    helpClass="success"
+    iconLeft="zap"
+    iconRight="chevron-down"
+    onChange={() => {}}
+    value="Input text"
+  />
+  <TextField
+    help={<><Icon icon="zap" size={12} style={{paddingRight: '4px'}}/>help text.</>}
+    helpClass="error"
+    iconLeft="zap"
+    iconRight="chevron-down"
+    onChange={() => {}}
+    value="Input text"
+  />
+  <TextField
+    help={<><Icon icon="zap" size={12} style={{paddingRight: '4px'}}/>help text.</>}
+    helpClass="warning"
+    iconLeft="zap"
+    iconRight="chevron-down"
+    onChange={() => {}}
+    value="Input text"
+  />
+</Canvas>
+
+## Anatomia
+* Container
+
+## Design Tokens
+`$font-family-primary`
+`$font-family-secondary`
+`$font-weight-regular`
+`$font-weight-bold`
+`$font-size-sm`
+`$font-size-xs`
+`$font-size-xxs`
+`$line-height-long-text`
+
+## Variações
+* Light Mode.
+* Dark Mode.
+* Tamanho.

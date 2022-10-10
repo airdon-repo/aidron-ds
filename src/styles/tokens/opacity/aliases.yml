@@ -1,0 +1,11 @@
+---
+global:
+  type: aliases
+  category: category-opacity
+
+aliases:
+  opacity-transparent: 8%
+  opacity-semi-transparent: 16%
+  opacity-medium: 32%
+  opacity-intense: 64%
+  opacity-semi-opaque: 80%

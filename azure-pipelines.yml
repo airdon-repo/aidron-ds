@@ -1,0 +1,135 @@
+# Docker
+# Build a Docker image
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+  branches:
+    include:
+      - master
+
+resources:
+  repositories:
+    - repository: self
+      type: git
+
+pool:
+  vmImage: ubuntu-20.04
+
+variables:
+  tag: '$(Build.BuildId)'
+  namespace: 'ragnarok'
+  dockerRegistry: "rennerdigital.azurecr.io"
+  imageName: 'ragnarok/ragnarok'
+  fullImageName: '$(dockerRegistry)/$(imageName):$(tag)'
+  majorVersion: "unknown"
+  version: "unknown"
+
+stages:
+  - stage: set_variables
+    displayName: Set build variables
+    jobs:
+      - job: set_variables
+        displayName: 'Set vars'
+        steps:
+          - bash: |
+              v=$(cat package.json | grep version | head -1 | awk -F':' '{ print $2 }' | sed 's/[", ]//g')
+              mv=$(echo $v | cut -d'.' -f 1)
+              if [ $mv -eq 0 ]; then
+                  echo "Usar mv=1"
+              fi
+              echo "Version: $v"
+              echo "Major Version: $mv"
+              echo "##vso[task.setvariable variable=version]$v"
+              echo "##vso[task.setvariable variable=majorVersion]$mv"
+  - stage: Build_base_image
+    displayName: Build base image
+    jobs:
+      - job: CheckChanges
+        displayName: 'Check changes in package.json file'
+        steps:
+          - bash: |
+              FILES="package.json Dockerfile.base"
+
+              CHANGED_FILES=$(git diff HEAD HEAD~ --name-only)
+              MATCH_COUNT=0
+
+              echo "Checking for file changes..."
+              for FILE in $CHANGED_FILES
+              do
+                for aFIle in $FILES
+                do
+                if [[ $FILE == *$aFIle* ]]; then
+                  MATCH_FOUND=true
+                  MATCH_COUNT=$(($MATCH_COUNT+1))
+                  break
+                fi
+                done
+              done
+              echo "$MATCH_COUNT match(es) for filter '$PATH_FILTER' found."
+              if [[ $MATCH_COUNT -gt 0 ]]; then
+                echo "##vso[task.setvariable variable=BUILD_BASE_IMAGE;isOutput=true]true"
+              else
+                echo "##vso[task.setvariable variable=BUILD_BASE_IMAGE;isOutput=true]false"
+              fi
+            name: check_changes
+            displayName: 'Check changed files'
+      - job: Build_Base
+        displayName: Build Base
+        dependsOn: CheckChanges
+        condition: eq(dependencies.CheckChanges.outputs['check_changes.BUILD_BASE_IMAGE'], 'true')
+        steps:
+          - task: Docker@2
+            inputs:
+              containerRegistry: 'rennerdigital_registry'
+              repository: '$(imageName)-base'
+              command: 'buildAndPush'
+              Dockerfile: '**/Dockerfile.base'
+              tags: |
+                v$(majorVersion)
+                $(tag)
+                latest
+  - stage: Build
+    displayName: Build image and publish artifact
+    jobs:
+      - job: Build
+        displayName: Build
+        steps:
+          - task: Docker@2
+            inputs:
+              containerRegistry: 'rennerdigital_registry'
+              repository: $(imageName)
+              command: 'buildAndPush'
+              Dockerfile: '**/Dockerfile'
+              tags: |
+                $(tag)
+                latest
+                $(version)
+      - job: Publish
+        displayName: Publish to Registry
+        steps:
+          - task: Npm@1
+            inputs:
+              command: 'publish'
+              verbose: true
+              publishRegistry: 'useFeed'
+              publishFeed: '1063b559-882a-4355-8a7b-ff94577962fb'
+
+  - stage: deploy
+    displayName: Deploy Produção
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
+    jobs:
+      - job: deploy
+        steps:
+        - task: KubernetesManifest@0
+          inputs:
+            action: 'deploy'
+            kubernetesServiceConnection: 'aks-auto-hlg'
+            namespace: '$(namespace)'
+            containers: '$(fullImageName)'
+            manifests: 'k8s-deployment.yml'
+            imagePullSecrets: 'rennerdigital'
+
+#    - upload: manifests
+#      artifact: manifests
+
+

@@ -1,0 +1,48 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import Code from "./assets/code-brackets.svg";
+import Colors from "./assets/colors.svg";
+import Comments from "./assets/comments.svg";
+import Direction from "./assets/direction.svg";
+import Flow from "./assets/flow.svg";
+import Plugin from "./assets/plugin.svg";
+import Repo from "./assets/repo.svg";
+import StackAlt from "./assets/stackalt.svg";
+
+<Meta
+  title="Aidron DS/Introdução"
+  parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# Aidron Design System
+
+Seguimos uma [metodologia baseada em componentes](https://www.componentdriven.org/) começando com componentes atômicos e modulares reutilizando-os para os mais complexos e robustos.
+
+Depois de clonar o repositório:
+
+```
+npm install
+npm run storybook
+```
+
+## Design Tokens
+
+São a menor parte de um design system e são responsáveis por manter a consistência visual de um produto. Pequenas constantes que são usados em todo sistema, como cores, espaçamentos, larguras, tipografia e padrões visuais.
+Eles estão no projeto em uma arquitetura de arquivos **.yml** com variáveis descritivas; usando o `theo` essas variáveis são convertidas em um arquivo **SASS(tokens.scss)**, que por sua vez é convertido, juntamente com o **tema (theme.scss)**, para um arquivo **CSS (theme.css)**, este é o arquivo que deve ser importado no sistema que usará os componentes.
+
+## Engine
+
+Toda a aplicação é construída em [Nodejs](https://nodejs.org/) e os componentes usando [React](https://reactjs.org/).
+
+(aqui precisamos de mais detalhes sobre a exportação do projeto como um pacote)
+
+## Documentação
+
+Usamos o [Storybook](https://storybook.js.org/) para gerar uma documentação interativa dos componentes do projeto, passando por todas suas variações e usos; a plataforma ainda oferece um modo Canvas onde todas as opções podem ser exploradas.
+
+## Testes
+
+[Jest](https://jestjs.io/) é responsável pelos testes que devem ser escritos para cada componente, esses testes vão rodar sempre que um `push` é feito, em caso de falha o `push` não é concluído, fazendo com que nada vá para o projeto principal com bugs ou mal testado.
+
+## Componentização
+
+A estrutura principal consiste em adicionar classes que alteram o visual esperado de acordo com o que foi planejado pelo **Visual Designer** e os `design tokens` do projeto. O comportamento foi planejado pela equipe juntamente com o **Product Designer** que levantou a necessidade do componente; comportamento esse que determina como serão os testes, critérios de aceite e etc.

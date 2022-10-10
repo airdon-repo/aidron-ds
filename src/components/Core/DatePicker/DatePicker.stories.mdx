@@ -1,0 +1,53 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { format } from 'date-fns';
+import { DatePicker } from './DatePicker';
+
+<Meta
+  title="Core/DatePicker/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# DatePicker
+Date-pickers permitem com que os usuários selecionem uma data ou um intervalo de datas. 
+
+<Canvas>
+  <DatePicker
+    selected={new Date()}
+    value={format(new Date(), 'dd/MM/yyyy')}
+    onDateChanged={(x) => console.log(x)}
+  />
+  <DatePicker
+    range
+    selected={[new Date(2021, 3, 22), new Date(2021, 3, 28)]}
+    value={[format(new Date(2021, 3, 22), 'dd/MM/yyyy'), format(new Date(2021, 3, 28), 'dd/MM/yyyy')].join(' - ')}
+    onDateChanged={(x) => console.log(x)}
+  />
+</Canvas>
+
+## Anatomia
+* Container
+* Calendar Controls
+* Monthly calendar
+* Year selection
+
+## Design Tokens
+`$font-size-xs`
+`$font-weight-regular`
+`$font-weight-bold`
+`$border-radius-md`
+`$border-radius-pill`
+`$border-radius-circle`
+`$spacing-inline-xs`
+`$spacing-inline-sm`
+`$spacing-stack-sm`
+`$spacing-stack-md`
+`$elevation-level-light-2`
+`$elevation-level-dark-2`
+`$opacity-light-semi-transparent`
+`$opacity-dark-semi-transparent`
+
+## Variações
+* Light Mode.
+* Dark Mode.
+* Selected.
+* Range.

@@ -1,0 +1,6 @@
+imports:
+  - ./brand.yml
+  - ./neutral.yml
+  - ./support.yml
+global:
+  category: category-color

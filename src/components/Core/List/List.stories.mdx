@@ -1,0 +1,134 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { List, ListItem } from './List';
+import { Avatar } from '../Avatar';
+import { Icon } from '../Icon';
+
+<Meta
+  title="Core/List/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# List
+Os Dialogs informam os usuários sobre uma tarefa e podem conter informações críticas, exigir decisões ou envolver várias tarefas. 
+
+<Canvas>
+  <List active="1" width="350px">
+    <ListItem onClick={() => {}} trailingIcon="chevron-right">
+      <span>
+        <Icon
+          className="no-m-left no-m-vertical"
+          icon="star"
+          style={{ marginRight: '16px' }}
+        />
+      </span>
+      <span>
+        <Avatar
+          className="no-m-left no-m-vertical"
+          name="Dwigth Schrute"
+          size="sm"
+          src="static/media/avatar.7c7145cd.jpg"
+        />
+      </span>
+      <span
+        className="d-inline-block"
+        style={{ flex: 1 }}
+      >
+        <Text
+          className="no-m-vertical text-body-xs-bold"
+          size="xs"
+          weight="bold"
+        >
+          Item
+        </Text>
+        <Text
+          className="color-neutral-40 no-m-vertical text-body-xs-regular"
+          size="xs"
+        >
+          Description
+        </Text>
+      </span>
+    </ListItem>
+    <ListItem onClick={() => {}}>
+      <span>
+        <Icon
+          className="no-m-left no-m-vertical"
+          icon="star"
+          style={{ marginRight: '16px' }}
+        />
+      </span>
+      <span>
+        <Avatar
+          className="no-m-left no-m-vertical"
+          name="Dwigth Schrute"
+          size="sm"
+          src="static/media/avatar.7c7145cd.jpg"
+        />
+      </span>
+      <span
+        className="d-inline-block"
+        style={{ flex: 1 }}
+      >
+        <Text
+          className="no-m-vertical text-body-xs-bold"
+          size="xs"
+          weight="bold"
+        >
+          Item
+        </Text>
+        <Text
+          className="color-neutral-40 no-m-vertical text-body-xs-regular"
+          size="xs"
+        >
+          Description
+        </Text>
+      </span>
+    </ListItem>
+    <ListItem onRightClick={() => {}} trailingIcon="more-vertical">
+      <span>
+        <Avatar
+          className="no-m-left no-m-vertical"
+          name="Dwigth Schrute"
+          size="sm"
+          src="static/media/avatar.7c7145cd.jpg"
+        />
+      </span>
+      <span
+        className="d-inline-block"
+        style={{ flex: 1 }}
+      >
+        <Text
+          className="no-m-vertical text-body-xs-bold"
+          size="xs"
+          weight="bold"
+        >
+          Item
+        </Text>
+        <Text
+          className="color-neutral-40 no-m-vertical text-body-xs-regular"
+          size="xs"
+        >
+          Description
+        </Text>
+      </span>
+    </ListItem>
+  </List>
+</Canvas>
+
+## Anatomia
+* Leading Icon (opcional)
+* Avatar (opcional)
+* Label
+* Trailing Icon (opcional)
+* Description (opcional)
+
+## Design Tokens
+`$spacing-stack-sm`
+`$spacing-inline-sm`
+`$font-size-xs`
+`$border-radius-sm`
+`$border-radius-pill`
+
+## Variações
+* Light Mode.
+* Dark Mode.
+* Estado.

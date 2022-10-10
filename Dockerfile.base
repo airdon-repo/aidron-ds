@@ -1,0 +1,29 @@
+FROM node:14.16.0-buster
+
+LABEL org.opencontainers.image.authors="Lojas Renner - Datalab <datalab@lojasrenner.com.br>"
+LABEL org.opencontainers.image.source="https://lojasrenner@dev.azure.com/lojasrenner/DataLab%20-%20Guilda%20de%20UX/_git/ragnarok"
+
+RUN apt-get update \
+    && apt-get -y upgrade \
+    && apt-get -y install net-tools \
+                          tcpdump \
+                          dnsutils \
+    && apt-get clean \
+    && npm config set @lojasrenner:registry=https://pkgs.dev.azure.com/lojasrenner/_packaging/renner_lab/npm/registry/ \
+    && npm config set @lojasrenner:always-auth=true \
+    && npm config set //pkgs.dev.azure.com/lojasrenner/_packaging/renner_lab/npm/registry/:username=lojasrenner \
+    && npm config set //pkgs.dev.azure.com/lojasrenner/_packaging/renner_lab/npm/registry/:_password="emlrZmR1c2hka2pwdHA3cmx5NTVzeW5teHdheWVmazViNTU3aTNzbnVtNHo0eGFqd3lwYQ==" \
+    && npm config set //pkgs.dev.azure.com/lojasrenner/_packaging/renner_lab/npm/registry/:email=datalab@lojasrenner.com.br \
+    && npm config set //pkgs.dev.azure.com/lojasrenner/_packaging/renner_lab/npm/:username=lojasrenner \
+    && npm config set //pkgs.dev.azure.com/lojasrenner/_packaging/renner_lab/npm/:_password="emlrZmR1c2hka2pwdHA3cmx5NTVzeW5teHdheWVmazViNTU3aTNzbnVtNHo0eGFqd3lwYQ==" \
+    && npm config set //pkgs.dev.azure.com/lojasrenner/_packaging/renner_lab/npm/:email=datalab@lojasrenner.com.br
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+EXPOSE 6006
+
+

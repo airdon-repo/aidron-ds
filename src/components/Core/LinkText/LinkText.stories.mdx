@@ -1,0 +1,33 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { LinkText } from './LinkText';
+
+<Meta
+  title="Core/LinkText/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# LinkText
+Links são usados para navegar pelas páginas internas ou externas de uma aplicação.
+
+<Canvas>
+  <LinkText to="#">Lorem Ipsum Dolor Sit Amet</LinkText>
+  <LinkText to="#" size="xs">Lorem Ipsum Dolor Sit Amet</LinkText>
+  <LinkText to="#" size="xxs">Lorem Ipsum Dolor Sit Amet</LinkText>
+</Canvas>
+
+## Anatomia
+* Container
+
+## Design Tokens
+`$font-family-secondary`
+`$font-weight-regular`
+`$font-size-sm`
+`$font-size-xs`
+`$font-size-xxs`
+`$line-height-long-text`
+`$text-decoration-underline`
+
+## Variações
+* Light Mode.
+* Dark Mode.
+* Tamanho.

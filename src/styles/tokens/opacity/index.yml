@@ -1,0 +1,4 @@
+imports:
+  - ./opacity.yml
+global:
+  category: opacity

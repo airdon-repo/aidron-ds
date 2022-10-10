@@ -1,0 +1,44 @@
+---
+global:
+  type: spacing
+  category: category-spacing
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: spacing-squish-xxxs
+    value: '{!spacing-squish-xxxs}'
+    meta:
+      friendlyName: Spacing Squish XXXS
+    category: spacing
+
+  - name: spacing-squish-xxs
+    value: '{!spacing-squish-xxs}'
+    meta:
+      friendlyName: Spacing Squish XXS
+    category: spacing
+
+  - name: spacing-squish-xs
+    value: '{!spacing-squish-xs}'
+    meta:
+      friendlyName: Spacing Squish XS
+    category: spacing
+
+  - name: spacing-squish-sm
+    value: '{!spacing-squish-sm}'
+    meta:
+      friendlyName: Spacing Squish SM
+    category: spacing
+
+  - name: spacing-squish-md
+    value: '{!spacing-squish-md}'
+    meta:
+      friendlyName: Spacing Squish MD
+    category: spacing
+
+  - name: spacing-squish-lg
+    value: '{!spacing-squish-lg}'
+    meta:
+      friendlyName: Spacing Squish LG
+    category: spacing

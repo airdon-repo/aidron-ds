@@ -1,0 +1,34 @@
+---
+global:
+  type: aliases
+  category: category-font-style
+
+aliases:
+  font-family-primary: "Hurme Geometric Sans"
+  font-family-secondary: "Lato"
+
+  font-weight-regular: 400
+  font-weight-medium: 500
+  font-weight-bold: 700
+
+  font-size-xxs: 10.24px
+  font-size-xs: 12.8px
+  font-size-sm: 16px
+  font-size-md: 20px
+  font-size-lg: 25px
+  font-size-xl: 31.25px
+  font-size-xxl: 39.06px
+  font-size-xxxl: 48.83px
+
+  line-height-display: 160%
+  line-height-heading: 140%
+  line-height-short-text: 150%
+  line-height-long-text: 150%
+
+  text-decoration-allcaps: uppercase
+  text-decoration-underline: underline
+
+  text-left: left
+  text-right: right
+  text-center: center
+  text-justify: justify

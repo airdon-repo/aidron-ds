@@ -1,0 +1,30 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Icon } from './Icon';
+import List from './icons';
+
+<Meta
+  title="Core/Icon/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Icon
+<Canvas>
+  {List.map((x) => (
+    <Icon
+      icon={x}
+    />
+  ))}
+</Canvas>
+
+## Anatomia
+* Container
+* Icon
+
+<!-- ## Design Tokens -->
+
+## Variações
+* Light Mode.
+* Dark Mode.
+* Icon.
+* Tamanho.
+* Cor.

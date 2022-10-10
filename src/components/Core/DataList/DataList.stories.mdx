@@ -1,0 +1,45 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { DataList, ProductCard } from './DataList';
+import { products } from './dummy_data';
+
+<Meta
+  title="Core/DataList/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# DataList
+Listas de dados exibem conjuntos de dados em linhas correspondendo ao Componente usado.
+
+<Canvas>
+  <DataList
+  data={products}
+  dataConfig={[
+    {
+      label: 'ID',
+      value: 'id'
+    }
+  ]}
+  itemComponent={ProductCard}
+  paginationCount={10}
+  sort={[
+    {
+      desc: false,
+      id: 'id'
+    }
+  ]}
+/>
+</Canvas>
+
+## Anatomia
+* Componente
+* Pagination bar
+
+## Design Tokens
+`$spacing-inline-xs`
+`$spacing-inline-md`
+`$spacing-inline-sm`
+`$spacing-stack-md`
+
+## Variações
+* Light Mode.
+* Dark Mode.

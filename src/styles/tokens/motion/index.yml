@@ -1,0 +1,5 @@
+imports:
+  - ./easing.yml
+  - ./duration.yml
+global:
+  category: time

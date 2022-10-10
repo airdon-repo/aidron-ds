@@ -1,0 +1,77 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Avatar } from './Avatar';
+
+<Meta
+  title="Core/Avatar/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+<style>{`
+  div.bg-light .wrapper {
+    display: inline-flex;
+    flex-direction: row;
+  }
+`}</style>
+
+# Avatar
+O avatar é utilizado para identificar usuários. Ele também pode ser usado como botão para direcionar o usuário para os detalhes de sua conta.
+
+<div class="bg-light">
+  <Canvas>
+    <div className="wrapper">
+      <Avatar
+        name="Dwigth Schrute"
+        size="xl"
+        src="static/media/avatar.7c7145cd.jpg"
+      />
+      <Avatar
+        name="Dwigth Schrute"
+        size="lg"
+        src="static/media/avatar.7c7145cd.jpg"
+      />
+      <Avatar
+        name="Dwigth Schrute"
+        size="md"
+        src="static/media/avatar.7c7145cd.jpg"
+      />
+      <Avatar
+        name="Dwigth Schrute"
+        size="sm"
+        src="static/media/avatar.7c7145cd.jpg"
+      />
+      <Avatar
+        name="Dwigth Schrute"
+        size="xl"
+      />
+      <Avatar
+        name="Dwigth Schrute"
+        size="lg"
+      />
+      <Avatar
+        name="Dwigth Schrute"
+        size="md"
+      />
+      <Avatar
+        name="Dwigth Schrute"
+        size="sm"
+      />
+    </div>
+  </Canvas>
+</div>
+
+## Anatomia
+* Container.
+* Iniciais.
+* Foto.
+
+## Design Tokens
+`$spacing-inset-sm`
+
+## Variações
+* Light Mode.
+* Dark Mode.
+* Tamanho.
+
+## Comportamento
+* Se possível mostrar a foto do usuário.
+* Se não houver foto as iniciais são exibidas.

@@ -1,0 +1,42 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Switch } from './Switch';
+
+<Meta
+  title="Core/Switch/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Switch
+A tooltip oferece informações complementares breves de um elemento gráfico ou componente de página a partir da interação de mouse-over.
+
+<Canvas>
+  <Switch
+    handleChange={(x) => console.log(x)}
+    value
+  >
+    Label
+  </Switch>
+</Canvas>
+
+## Anatomia
+* Label
+* Knob
+* Track
+* Hit Area
+
+## Design Tokens
+`$spacing-stack-sm`
+`$spacing-inset-sm`
+`$spacing-inline-sm`
+`$font-weight-bold`
+`$line-height-short-text`
+`$border-radius-md`
+`$opacity-light-transparent`
+`$opacity-dark-transparent`
+`$border-radius-circle`
+`$opacity-light-semi-transparent`
+`$opacity-dark-semi-transparent`
+
+## Variações
+* Light Mode.
+* Dark Mode.

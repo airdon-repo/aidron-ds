@@ -1,0 +1,50 @@
+---
+global:
+  type: spacing
+  category: category-spacing
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: spacing-inset-xxxs
+    value: '{!spacing-inset-xxxs}'
+    meta:
+      friendlyName: Spacing Inset XXXS
+    category: spacing
+
+  - name: spacing-inset-xxs
+    value: '{!spacing-inset-xxs}'
+    meta:
+      friendlyName: Spacing Inset XXS
+    category: spacing
+
+  - name: spacing-inset-xs
+    value: '{!spacing-inset-xs}'
+    meta:
+      friendlyName: Spacing Inset XS
+    category: spacing
+
+  - name: spacing-inset-sm
+    value: '{!spacing-inset-sm}'
+    meta:
+      friendlyName: Spacing Inset SM
+    category: spacing
+
+  - name: spacing-inset-md
+    value: '{!spacing-inset-md}'
+    meta:
+      friendlyName: Spacing Inset MD
+    category: spacing
+
+  - name: spacing-inset-lg
+    value: '{!spacing-inset-lg}'
+    meta:
+      friendlyName: Spacing Inset LG
+    category: spacing
+
+  - name: spacing-inset-xl
+    value: '{!spacing-inset-xl}'
+    meta:
+      friendlyName: Spacing Inset XL
+    category: spacing

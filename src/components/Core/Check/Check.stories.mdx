@@ -1,0 +1,64 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Check } from './Check';
+
+<Meta
+  title="Core/Check/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Check
+Checkboxes são utilizados quando, dentro de uma variedade de opções, mais de um pode ser selecionada. Eles também são usados caso há apenas uma opção para ser selecionada, como por exemplo concordar ou não comos termos e condições de um produto.
+
+<Canvas>
+  <Check
+    handleChange={() => {}}
+    value="0"
+  >
+    Label
+  </Check>
+  <Check
+    handleChange={() => {}}
+    value="1"
+  >
+    Label
+  </Check>
+  <Check
+    handleChange={() => {}}
+    value="2"
+  >
+    Label
+  </Check>
+  <Check
+    handleChange={() => {}}
+    value="0"
+  />
+  <Check
+    handleChange={() => {}}
+    value="1"
+  />
+  <Check
+    handleChange={() => {}}
+    value="2"
+  />
+</Canvas>
+
+## Anatomia
+* Check icon ou Indeterminate icon.
+* Checkbox.
+* Label.
+
+## Design Tokens
+`$font-weight-bold`
+`$spacing-inline-sm`
+`$opacity-light-transparent`
+`$opacity-light-semi-transparent`
+`$opacity-dark-transparent`
+`$opacity-dark-semi-transparent`
+`$elevation-level-light-2`
+`$elevation-level-dark-2`
+`$border-radius-circle`
+
+## Variações
+* Light Mode.
+* Dark Mode.
+* Estados.

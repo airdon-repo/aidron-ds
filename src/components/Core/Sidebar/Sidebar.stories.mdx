@@ -1,0 +1,124 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Sidebar } from './Sidebar';
+import { Avatar } from '../Avatar';
+import { List, ListItem } from '../List';
+import { Icon } from '../Icon';
+import { Text } from '../Text';
+
+<Meta
+  title="Core/Sidebar/Docs"
+  parameters={{ previewTabs: { 'canvas': { hidden: true }}}}
+/>
+
+# Sidebar
+Fornece acesso aos destinos da sua aplicação.
+<Canvas>
+  <Sidebar open onColapse={() => {}}>
+    <div className="profile">
+      <Avatar
+        name="Dwigth Schrute"
+        size="lg"
+        src="static/media/avatar.7c7145cd.jpg"
+      />
+      <div className="details">
+        <Text weight="bold" size="sm">Dwigth</Text>
+        <Text size="xs">Planner</Text>
+      </div>
+    </div>
+    <section>
+      <Text allcaps size="xxs">Section</Text>
+      <List
+        active="3"
+      >
+        {['star', 'zap', 'phone', 'pie-chart', 'star'].map((x, index) => (
+          <ListItem
+            key={index.toString()}
+          >
+            <span>
+              <Icon
+                className="no-m-left no-m-vertical"
+                style={{ marginRight: '16px' }}
+                icon={x}
+              />
+            </span>
+            <span
+              className="d-inline-block"
+              style={{ flex: 1 }}
+            >
+              <Text
+                className="no-m-vertical"
+                weight="bold"
+              >
+                Item
+              </Text>
+            </span>
+          </ListItem>
+        ))}
+      </List>
+    </section>
+  </Sidebar>
+  <Sidebar open={false} onColapse={() => {}}>
+    <div className="profile">
+      <Avatar
+        name="Dwigth Schrute"
+        size="md"
+        src="static/media/avatar.7c7145cd.jpg"
+      />
+      <div className="details">
+        <Text weight="bold" size="sm">Dwigth</Text>
+        <Text size="xs">Planner</Text>
+      </div>
+    </div>
+    <section>
+      <Text allcaps size="xxs">Section</Text>
+      <List
+        active="3"
+      >
+        {['star', 'zap', 'phone', 'pie-chart', 'star'].map((x, index) => (
+          <ListItem
+            key={index.toString()}
+          >
+            <span>
+              <Icon
+                className="no-m-left no-m-vertical"
+                style={{ marginRight: '16px' }}
+                icon={x}
+              />
+            </span>
+            <span
+              className="d-inline-block"
+              style={{ flex: 1 }}
+            >
+              <Text
+                className="no-m-vertical"
+                weight="bold"
+              >
+                Item
+              </Text>
+            </span>
+          </ListItem>
+        ))}
+      </List>
+    </section>
+  </Sidebar>
+</Canvas>
+
+## Anatomia
+* Avatar
+* Name
+* User Settings
+* Role
+* Section (opcional)
+* List Component
+
+
+## Design Tokens
+`$spacing-stack-sm`
+`$spacing-inline-sm`
+`$layout-grid-lg-sidebar-open`
+`$layout-grid-lg-sidebar-close`
+
+## Variações
+* Light Mode.
+* Dark Mode.
+* Estado

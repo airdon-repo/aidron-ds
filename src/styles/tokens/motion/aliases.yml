@@ -1,0 +1,23 @@
+---
+global:
+  type: aliases
+  category: category-motion
+
+aliases:
+  motion-ease-default: cubic-bezier(.32, .01, .32, 1)
+  motion-ease-out: cubic-bezier(0, 0, .56, 1)
+  motion-ease-in: cubic-bezier(.4, 0, 1, 1)
+
+  # this must be redone
+  motion-ease-error: {tension: 400, friction: 6}
+
+  motion-duration-fast-1: 160ms
+  motion-duration-fast-2: 240ms
+  motion-duration-fast-3: 320ms
+
+  motion-duration-moderate-1: 400ms
+  motion-duration-moderate-2: 560ms
+
+  motion-duration-slow-1: 800ms
+  motion-duration-slow-2: 960ms
+  

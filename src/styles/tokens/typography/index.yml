@@ -1,0 +1,4 @@
+imports:
+  - ./typography.yml
+global:
+  category: font-style

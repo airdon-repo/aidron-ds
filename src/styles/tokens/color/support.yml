@@ -1,0 +1,368 @@
+---
+global:
+  type: color
+  category: category-color
+
+imports:
+  - ./aliases.yml
+
+props:
+  - name: red-medium
+    value: '{!red-medium}'
+    meta:
+      friendlyName: Color Brand Red Medium
+    category: background-color
+
+  - name: red-dark
+    value: '{!red-dark}'
+    meta:
+      friendlyName: Color Brand Red Dark
+    category: background-color
+
+  - name: red-darkest
+    value: '{!red-darkest}'
+    meta:
+      friendlyName: Color Brand Red Darkest
+    category: background-color
+
+  - name: red-light
+    value: '{!red-light}'
+    meta:
+      friendlyName: Color Brand Red Light
+    category: background-color
+
+  - name: red-lightest
+    value: '{!red-lightest}'
+    meta:
+      friendlyName: Color Brand Red Lightest
+    category: background-color
+
+  - name: yellow-medium
+    value: '{!yellow-medium}'
+    meta:
+      friendlyName: Color Brand Yellow Medium
+    category: background-color
+
+  - name: yellow-dark
+    value: '{!yellow-dark}'
+    meta:
+      friendlyName: Color Brand Yellow Dark
+    category: background-color
+
+  - name: yellow-darkest
+    value: '{!yellow-darkest}'
+    meta:
+      friendlyName: Color Brand Yellow Darkest
+    category: background-color
+
+  - name: yellow-light
+    value: '{!yellow-light}'
+    meta:
+      friendlyName: Color Brand Yellow Light
+    category: background-color
+
+  - name: yellow-lightest
+    value: '{!yellow-lightest}'
+    meta:
+      friendlyName: Color Brand Yellow Lightest
+    category: background-color
+
+  - name: green-medium
+    value: '{!green-medium}'
+    meta:
+      friendlyName: Color Brand Green Medium
+    category: background-color
+
+  - name: green-dark
+    value: '{!green-dark}'
+    meta:
+      friendlyName: Color Brand Green Dark
+    category: background-color
+
+  - name: green-darkest
+    value: '{!green-darkest}'
+    meta:
+      friendlyName: Color Brand Green Darkest
+    category: background-color
+
+  - name: green-light
+    value: '{!green-light}'
+    meta:
+      friendlyName: Color Brand Green Light
+    category: background-color
+
+  - name: green-lightest
+    value: '{!green-lightest}'
+    meta:
+      friendlyName: Color Brand Green Lightest
+    category: background-color
+
+  - name: blue-medium
+    value: '{!blue-medium}'
+    meta:
+      friendlyName: Color Brand Blue Medium
+    category: background-color
+
+  - name: blue-dark
+    value: '{!blue-dark}'
+    meta:
+      friendlyName: Color Brand Blue Dark
+    category: background-color
+
+  - name: blue-darkest
+    value: '{!blue-darkest}'
+    meta:
+      friendlyName: Color Brand Blue Darkest
+    category: background-color
+
+  - name: blue-light
+    value: '{!blue-light}'
+    meta:
+      friendlyName: Color Brand Blue Light
+    category: background-color
+
+  - name: blue-lightest
+    value: '{!blue-lightest}'
+    meta:
+      friendlyName: Color Brand Blue Lightest
+    category: background-color
+
+  - name: color-red-medium
+    value: '{!color-red-medium}'
+    meta:
+      friendlyName: Color Brand Red Medium
+    category: color
+
+  - name: color-red-dark
+    value: '{!color-red-dark}'
+    meta:
+      friendlyName: Color Brand Red Dark
+    category: color
+
+  - name: color-red-darkest
+    value: '{!color-red-darkest}'
+    meta:
+      friendlyName: Color Brand Red Darkest
+    category: color
+
+  - name: color-red-light
+    value: '{!color-red-light}'
+    meta:
+      friendlyName: Color Brand Red Light
+    category: color
+
+  - name: color-red-lightest
+    value: '{!color-red-lightest}'
+    meta:
+      friendlyName: Color Brand Red Lightest
+    category: color
+
+  - name: color-yellow-medium
+    value: '{!color-yellow-medium}'
+    meta:
+      friendlyName: Color Brand Yellow Medium
+    category: color
+
+  - name: color-yellow-dark
+    value: '{!color-yellow-dark}'
+    meta:
+      friendlyName: Color Brand Yellow Dark
+    category: color
+  
+  - name: color-yellow-darkest
+    value: '{!color-yellow-darkest}'
+    meta:
+      friendlyName: Color Brand Yellow Darkest
+    category: color
+
+  - name: color-yellow-light
+    value: '{!color-yellow-light}'
+    meta:
+      friendlyName: Color Brand Yellow Light
+    category: color
+
+  - name: color-yellow-lightest
+    value: '{!color-yellow-lightest}'
+    meta:
+      friendlyName: Color Brand Yellow Lightest
+    category: color
+
+  - name: color-green-medium
+    value: '{!color-green-medium}'
+    meta:
+      friendlyName: Color Brand Green Medium
+    category: color
+
+  - name: color-green-dark
+    value: '{!color-green-dark}'
+    meta:
+      friendlyName: Color Brand Green Dark
+    category: color
+
+  - name: color-green-darkest
+    value: '{!color-green-darkest}'
+    meta:
+      friendlyName: Color Brand Green Darkest
+    category: color
+
+  - name: color-green-light
+    value: '{!color-green-light}'
+    meta:
+      friendlyName: Color Brand Green Light
+    category: color
+
+  - name: color-green-lightest
+    value: '{!color-green-lightest}'
+    meta:
+      friendlyName: Color Brand Green Lightest
+    category: color
+
+  - name: color-blue-medium
+    value: '{!color-blue-medium}'
+    meta:
+      friendlyName: Color Brand Blue Medium
+    category: color
+
+  - name: color-blue-dark
+    value: '{!color-blue-dark}'
+    meta:
+      friendlyName: Color Brand Blue Dark
+    category: color
+
+  - name: color-blue-darkest
+    value: '{!color-blue-darkest}'
+    meta:
+      friendlyName: Color Brand Blue Darkest
+    category: color
+
+  - name: color-blue-light
+    value: '{!color-blue-light}'
+    meta:
+      friendlyName: Color Brand Blue Light
+    category: color
+
+  - name: color-blue-lightest
+    value: '{!color-blue-lightest}'
+    meta:
+      friendlyName: Color Brand Blue Lightest
+    category: color
+
+  - name: border-red-medium
+    value: '{!border-red-medium}'
+    meta:
+      friendlyName: Border Brand Red Medium
+    category: border
+
+  - name: border-red-dark
+    value: '{!border-red-dark}'
+    meta:
+      friendlyName: Border Brand Red Dark
+    category: border
+
+  - name: border-red-darkest
+    value: '{!border-red-darkest}'
+    meta:
+      friendlyName: Border Brand Red Darkest
+    category: border
+
+  - name: border-red-light
+    value: '{!border-red-light}'
+    meta:
+      friendlyName: Border Brand Red Light
+    category: border
+
+  - name: border-red-lightest
+    value: '{!border-red-lightest}'
+    meta:
+      friendlyName: Border Brand Red Lightest
+    category: border
+
+  - name: border-yellow-medium
+    value: '{!border-yellow-medium}'
+    meta:
+      friendlyName: Border Brand Yellow Medium
+    category: border
+
+  - name: border-yellow-dark
+    value: '{!border-yellow-dark}'
+    meta:
+      friendlyName: Border Brand Yellow Dark
+    category: border
+  
+  - name: border-yellow-darkest
+    value: '{!border-yellow-darkest}'
+    meta:
+      friendlyName: Border Brand Yellow Darkest
+    category: border
+
+  - name: border-yellow-light
+    value: '{!border-yellow-light}'
+    meta:
+      friendlyName: Border Brand Yellow Light
+    category: border
+
+  - name: border-yellow-lightest
+    value: '{!border-yellow-lightest}'
+    meta:
+      friendlyName: Border Brand Yellow Lightest
+    category: border
+
+  - name: border-green-medium
+    value: '{!border-green-medium}'
+    meta:
+      friendlyName: Border Brand Green Medium
+    category: border
+
+  - name: border-green-dark
+    value: '{!border-green-dark}'
+    meta:
+      friendlyName: Border Brand Green Dark
+    category: border
+
+  - name: border-green-darkest
+    value: '{!border-green-darkest}'
+    meta:
+      friendlyName: Border Brand Green Darkest
+    category: border
+
+  - name: border-green-light
+    value: '{!border-green-light}'
+    meta:
+      friendlyName: Border Brand Green Light
+    category: border
+
+  - name: border-green-lightest
+    value: '{!border-green-lightest}'
+    meta:
+      friendlyName: Border Brand Green Lightest
+    category: border
+
+  - name: border-blue-medium
+    value: '{!border-blue-medium}'
+    meta:
+      friendlyName: Border Brand Blue Medium
+    category: border
+
+  - name: border-blue-dark
+    value: '{!border-blue-dark}'
+    meta:
+      friendlyName: Border Brand Blue Dark
+    category: border
+
+  - name: border-blue-darkest
+    value: '{!border-blue-darkest}'
+    meta:
+      friendlyName: Border Brand Blue Darkest
+    category: border
+
+  - name: border-blue-light
+    value: '{!border-blue-light}'
+    meta:
+      friendlyName: Border Brand Blue Light
+    category: border
+
+  - name: border-blue-lightest
+    value: '{!border-blue-lightest}'
+    meta:
+      friendlyName: Border Brand Blue Lightest
+    category: border
