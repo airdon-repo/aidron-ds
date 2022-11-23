@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 
-import { TextField } from '../TextField';
-import { SelectItem } from './SelectItem';
+import { TextField } from "../TextField";
+import { SelectItem } from "./SelectItem";
 
 const Select = ({
   children,
@@ -12,10 +12,14 @@ const Select = ({
   placeholder,
   multiselect,
   handleChange,
-  readOnly
+  readOnly,
 }) => {
-  const [selectedItem, setSelectedItem] = useState(typeof selected === 'object' ? undefined : selected);
-  const [multiSelected, setMultiSelected] = useState(multiselect ? selected : []);
+  const [selectedItem, setSelectedItem] = useState(
+    typeof selected === "object" ? undefined : selected
+  );
+  const [multiSelected, setMultiSelected] = useState(
+    multiselect ? selected : []
+  );
   const [selectedText, setSelectedText] = useState(undefined);
   const [richChildren, setRichChildren] = useState(children);
   const [showOptions, setShowOptions] = useState(false);
@@ -30,33 +34,39 @@ const Select = ({
 
   const handleMultiple = (value) => {
     setShowOptions(true);
-    setMultiSelected(multiSelected.some((e) => e === value)
-                    ? multiSelected.filter((e) => e !== value)
-                    : [value, ...multiSelected]);
+    setMultiSelected(
+      multiSelected.some((e) => e === value)
+        ? multiSelected.filter((e) => e !== value)
+        : [value, ...multiSelected]
+    );
   };
 
-  const PropedChildren = richChildren && richChildren.map((child, idx) => {
-    if (React.isValidElement(child) && child.type === SelectItem) {
-      return React.cloneElement(child, {
-        key: idx.toString(),
-        onSelect: multiselect ? handleMultiple : setSelectedItem,
-        selected: checkSelected(child.props.value)
-      });
-    }
-    return child;
-  });
+  const PropedChildren =
+    richChildren &&
+    richChildren.map((child, idx) => {
+      if (React.isValidElement(child) && child.type === SelectItem) {
+        return React.cloneElement(child, {
+          key: idx.toString(),
+          onSelect: multiselect ? handleMultiple : setSelectedItem,
+          selected: checkSelected(child.props.value),
+        });
+      }
+      return child;
+    });
 
   const changeHandler = (x) => {
-    if (x !== '') {
+    if (x !== "") {
       setShowOptions(true);
     } else {
       setShowOptions(false);
     }
     const filtered = children?.filter((child) => {
-      if (typeof child.props?.children === 'string') {
-        return child.props?.children.toLowerCase().indexOf(x.toLowerCase()) !== -1;
+      if (typeof child.props?.children === "string") {
+        return (
+          child.props?.children.toLowerCase().indexOf(x.toLowerCase()) !== -1
+        );
       }
-      if (typeof child.props?.children === 'object') {
+      if (typeof child.props?.children === "object") {
         return child.props?.label.toLowerCase().indexOf(x.toLowerCase()) !== -1;
       }
       return false;
@@ -68,17 +78,20 @@ const Select = ({
     if (names.length > 1) {
       return `${names[0]}...(+${names.length - 1})`;
     }
-    return names.reduce((a, x) => `${a}, ${x}`, '').substr(2);
+    return names.reduce((a, x) => `${a}, ${x}`, "").substr(2);
   };
 
   useEffect(() => {
     if (multiselect) {
-      const names = children?.filter((child) => {
-        if (multiSelected.some((e) => e === child.props.value)) {
-          return child.props.children;
-        }
-        return false;
-      }).filter(Boolean).map((x) => x.props.children);
+      const names = children
+        ?.filter((child) => {
+          if (multiSelected.some((e) => e === child.props.value)) {
+            return child.props.children;
+          }
+          return false;
+        })
+        .filter(Boolean)
+        .map((x) => x.props.children);
       setSelectedText(parseName(names));
     }
     if (handleChange) handleChange(multiSelected);
@@ -87,7 +100,9 @@ const Select = ({
   useEffect(() => {
     if (!multiselect) {
       if (handleChange) handleChange(selectedItem);
-      const [first] = children?.filter((child) => child.props.value === selectedItem);
+      const [first] = children?.filter(
+        (child) => child.props.value === selectedItem
+      );
       if (selectedItem) setSelectedText(first.props.children);
     }
   }, [selectedItem]);
@@ -106,12 +121,12 @@ const Select = ({
 
   useEffect(() => {
     if (showOptions) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     } else {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     }
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showOptions]);
 
@@ -123,19 +138,14 @@ const Select = ({
         hidden
         multiple={multiselect ? 1 : 0}
         onChange={handleChange}
-        className={[
-          'ragnarok',
-          'menu-select-hidden'
-        ].join(' ')}
+        className={["ragnarok", "menu-select-hidden"].join(" ")}
       >
-        {children && children.map((option, idx) => (
-          <option
-            value={option.props.value.toString()}
-            key={idx.toString()}
-          >
-            {option.props.children}
-          </option>
-        ))}
+        {children &&
+          children.map((option, idx) => (
+            <option value={option.props.value.toString()} key={idx.toString()}>
+              {option.props.children}
+            </option>
+          ))}
       </select>
 
       <div
@@ -143,10 +153,10 @@ const Select = ({
         style={{ width }}
         data-testid="select"
         className={[
-          'ragnarok',
-          'menu-select-wrapper',
-          showOptions ? 'open' : 'close'
-        ].join(' ')}
+          "ragnarok",
+          "menu-select-wrapper",
+          showOptions ? "open" : "close",
+        ].join(" ")}
       >
         <TextField
           iconRight="chevron-down"
@@ -158,14 +168,15 @@ const Select = ({
           type="search"
           onChange={changeHandler}
           placeholder={placeholder}
+          style={{ zIndex: "unset" }}
         />
         <div
           data-testid="menu-select"
           className={[
-            'ragnarok',
-            'menu-select',
-            showOptions ? 'open' : 'close'
-          ].join(' ')}
+            "ragnarok",
+            "menu-select",
+            showOptions ? "open" : "close",
+          ].join(" ")}
         >
           {PropedChildren && PropedChildren}
         </div>
@@ -202,14 +213,12 @@ Select.propTypes = {
 };
 
 Select.defaultProps = {
-  children: '',
+  children: "",
   selected: undefined,
   multiselect: false,
-  width: '250px',
+  width: "250px",
   readOnly: false,
   handleChange: undefined,
 };
 
-export {
-  Select
-};
+export { Select };

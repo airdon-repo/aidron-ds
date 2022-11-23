@@ -1,23 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const MenuItem = ({
-  children,
-  onClick,
-}) => (
-  <li
-    data-testid="menu-item"
-    className={[
-      'ragnarok',
-      'menu-item',
-    ].join(' ')}
-  >
+const MenuItem = ({ children, onClick }) => (
+  <li data-testid="menu-item" className={["ragnarok", "menu-item"].join(" ")}>
     <div
       role="button"
-      className={[
-        'ragnarok',
-        'menu-item-button',
-      ].join(' ')}
+      className={["ragnarok", "menu-item-button"].join(" ")}
       tabIndex={0}
       onClick={onClick ? () => onClick() : undefined}
       onKeyPress={onClick ? () => onClick() : undefined}
@@ -27,34 +15,20 @@ const MenuItem = ({
   </li>
 );
 
-const Dropdown = ({
-  children,
-  open,
-  position
-}) => (
+const Dropdown = ({ children, open, position }) => (
   <ul
     data-testid="dropdown"
-    className={[
-      'ragnarok',
-      'dropdown',
-      open ? 'open' : 'close',
-      position
-    ].join(' ')}
+    className={["ragnarok", "dropdown", open ? "open" : "close", position].join(
+      " "
+    )}
+    style={{ zIndex: 9999 }}
   >
     {children}
   </ul>
 );
 
-const Menu = ({
-  children
-}) => (
-  <div
-    data-testid="menu"
-    className={[
-      'ragnarok',
-      'menu',
-    ].join(' ')}
-  >
+const Menu = ({ children }) => (
+  <div data-testid="menu" className={["ragnarok", "menu"].join(" ")}>
     {children}
   </div>
 );
@@ -68,7 +42,7 @@ Menu.propTypes = {
 
 Dropdown.defaultProps = {
   open: false,
-  position: 'left'
+  position: "left",
 };
 
 Dropdown.propTypes = {
@@ -79,30 +53,26 @@ Dropdown.propTypes = {
   /**
    * Where should it appear?
    */
-  position: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
+  position: PropTypes.oneOf(["top", "bottom", "left", "right"]),
   /**
    * Dropdown content
    */
-   children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 MenuItem.defaultProps = {
-  onClick: undefined
+  onClick: undefined,
 };
 
 MenuItem.propTypes = {
   /**
    * Optional click Handler
    */
-   onClick: PropTypes.func,
-   /**
+  onClick: PropTypes.func,
+  /**
    * MenuItem content
    */
   children: PropTypes.node.isRequired,
 };
 
-export {
-  Dropdown,
-  Menu,
-  MenuItem
-};
+export { Dropdown, Menu, MenuItem };
