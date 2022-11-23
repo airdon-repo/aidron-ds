@@ -168,7 +168,6 @@ const Select = ({
           type="search"
           onChange={changeHandler}
           placeholder={placeholder}
-          style={{ zIndex: "unset" }}
         />
         <div
           data-testid="menu-select"
