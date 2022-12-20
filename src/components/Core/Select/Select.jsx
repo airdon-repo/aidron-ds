@@ -41,13 +41,16 @@ const Select = ({
     );
   };
 
+  const handleSingle = (value) =>
+    setSelectedItem(value === selectedItem ? undefined : value);
+
   const PropedChildren =
     richChildren &&
     richChildren.map((child, idx) => {
       if (React.isValidElement(child) && child.type === SelectItem) {
         return React.cloneElement(child, {
           key: idx.toString(),
-          onSelect: multiselect ? handleMultiple : setSelectedItem,
+          onSelect: multiselect ? handleMultiple : handleSingle,
           selected: checkSelected(child.props.value),
         });
       }
@@ -76,7 +79,7 @@ const Select = ({
 
   const parseName = (names) => {
     if (names.length > 1) {
-      return `${names[0]}...(+${names.length - 1})`;
+      return `${names[0]} ...(+${names.length - 1})`;
     }
     return names.reduce((a, x) => `${a}, ${x}`, "").substr(2);
   };
@@ -103,7 +106,7 @@ const Select = ({
       const [first] = children?.filter(
         (child) => child.props.value === selectedItem
       );
-      if (selectedItem) setSelectedText(first.props.children);
+      setSelectedText(selectedItem ? first.props.children : undefined);
     }
   }, [selectedItem]);
 
