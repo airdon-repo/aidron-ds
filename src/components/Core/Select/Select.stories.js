@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { Select } from './Select';
-import { SelectItem } from './SelectItem';
+import { Select } from "./Select";
+import { SelectItem } from "./SelectItem";
 
 export default {
-  title: 'Core/Select',
+  title: "Core/Select",
   component: Select,
 };
 
@@ -27,20 +27,22 @@ const Template = (args) => {
       <SelectItem value="4">Option 4</SelectItem>
       <SelectItem value="5">Option 5</SelectItem>
       <SelectItem value="6">Option 6</SelectItem>
-      <SelectItem value="7">Option 7 with long text for masking purposes</SelectItem>
+      <SelectItem value="7">
+        Option 7 with long text for masking purposes
+      </SelectItem>
     </Select>
   );
 };
 
 export const SelectInput = Template.bind({});
 SelectInput.args = {
-  selected: '3',
-  readOnly: true
+  selected: "3",
+  readOnly: true,
 };
 
 export const MultiSelect = Template.bind({});
 MultiSelect.args = {
-  selected: ['1', '3'],
+  selected: ["1", "3"],
   readOnly: true,
-  multiselect: true
+  multiselect: true,
 };

@@ -103,11 +103,13 @@ const Select = ({
   useEffect(() => {
     if (!multiselect) {
       if (handleChange) handleChange(selectedItem);
-      if (children) {
-        const [first] = children?.filter(
+      if (children && selectedItem) {
+        const first = children?.find(
           (child) => child.props.value === selectedItem
         );
-        setSelectedText(selectedItem ? first.props.children : undefined);
+        setSelectedText(
+          selectedItem && first ? first.props.children : undefined
+        );
       }
     }
   }, [selectedItem]);
