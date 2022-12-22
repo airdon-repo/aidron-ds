@@ -85,6 +85,23 @@ const Select = ({
   };
 
   useEffect(() => {
+    if (children) {
+      setRichChildren(
+        children.map((child, idx) => {
+          if (React.isValidElement(child) && child.type === SelectItem) {
+            return React.cloneElement(child, {
+              key: idx.toString(),
+              onSelect: multiselect ? handleMultiple : handleSingle,
+              selected: checkSelected(child.props.value),
+            });
+          }
+          return child;
+        })
+      );
+    }
+  }, [children]);
+
+  useEffect(() => {
     if (multiselect) {
       const names = children
         ?.filter((child) => {
