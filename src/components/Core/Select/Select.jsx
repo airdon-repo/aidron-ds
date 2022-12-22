@@ -20,7 +20,7 @@ const Select = ({
   const [multiSelected, setMultiSelected] = useState(
     multiselect ? selected : []
   );
-  const [selectedText, setSelectedText] = useState(undefined);
+  const [selectedText, setSelectedText] = useState(label);
   const [richChildren, setRichChildren] = useState(children);
   const [showOptions, setShowOptions] = useState(false);
   const node = useRef();
@@ -103,6 +103,7 @@ const Select = ({
   useEffect(() => {
     if (!multiselect) {
       if (handleChange) handleChange(selectedItem);
+      setShowOptions(false);
       if (children && selectedItem) {
         const first = children?.find(
           (child) => child.props.value === selectedItem
@@ -111,6 +112,7 @@ const Select = ({
           selectedItem && first ? first.props.children : undefined
         );
       }
+      if (!selectedItem) setSelectedText(label);
     }
   }, [selectedItem]);
 
@@ -121,7 +123,6 @@ const Select = ({
   // eslint-disable-next-line consistent-return
   const handleClickOutside = (e) => {
     if (!node.current.contains(e.target)) {
-      // setSelectedText('');
       return setShowOptions(false);
     }
   };
