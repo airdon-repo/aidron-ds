@@ -1225,6 +1225,8 @@ div.menu-select-wrapper {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+          max-width: 100%;
+          width: calc(100% - 64px) !important;
         }
         input.textfield-input {
           max-width: 100%;
