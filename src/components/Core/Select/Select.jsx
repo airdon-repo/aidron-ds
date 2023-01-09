@@ -135,6 +135,7 @@ const Select = ({
 
   useEffect(() => {
     if (!multiselect) setSelectedItem(selected);
+    else setMultiSelected(selected);
   }, [selected]);
 
   // eslint-disable-next-line consistent-return
