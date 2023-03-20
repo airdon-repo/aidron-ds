@@ -1,25 +1,25 @@
-import '../src/styles/theme.css';
-import { themes } from '@storybook/theming';
-import { DocsContainer } from './components/DocContainer';
+import "../src/styles/theme.css";
+import { themes } from "@storybook/theming";
+import { DocsContainer } from "./components/DocContainer";
 
-import darkLogo from '../src/stories/assets/logo-bg-dark.png';
-import lightLogo from '../src/stories/assets/logo-bg-light.png';
+import darkLogo from "../src/stories/assets/logo-bg-dark.png";
+import lightLogo from "../src/stories/assets/logo-bg-light.png";
 
 const themeOverrideLight = {
-  brandTitle: 'Ragnarok',
-  brandUrl: './',
-  brandImage: lightLogo
-}
+  brandTitle: "Aidron",
+  brandUrl: "./",
+  brandImage: lightLogo,
+};
 const themeOverrideDark = {
-  brandTitle: 'Ragnarok',
-  brandUrl: './',
-  brandImage: darkLogo
-}
+  brandTitle: "Aidron",
+  brandUrl: "./",
+  brandImage: darkLogo,
+};
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: {
-    disable: true
+    disable: true,
   },
   docs: {
     container: DocsContainer,
@@ -27,7 +27,7 @@ export const parameters = {
   // Storybook a11y addon configuration
   a11y: {
     // the target DOM element
-    element: '#root',
+    element: "#root",
     // sets the execution mode for the addon
     manual: false,
   },
@@ -35,19 +35,19 @@ export const parameters = {
     // Override the default dark theme
     dark: {
       ...themes.dark,
-      appBg: '#181818',
-      ...themeOverrideDark
+      appBg: "#181818",
+      ...themeOverrideDark,
     },
     // Override the default light theme
     light: {
       ...themes.normal,
-      appBg: '#ffffff',
-      ...themeOverrideLight
+      appBg: "#ffffff",
+      ...themeOverrideLight,
     },
-    darkClass: 'bg-dark',
-    lightClass: 'bg-light',
+    darkClass: "bg-dark",
+    lightClass: "bg-light",
     stylePreview: true,
     // current: 'light',
   },
-  layout: 'centered',
-}
+  layout: "centered",
+};

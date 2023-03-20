@@ -1,21 +1,21 @@
 /* eslint-disable no-nested-ternary */
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import {
   useTable,
   useFilters,
   useGlobalFilter,
   usePagination,
   useSortBy,
-} from 'react-table';
+} from "react-table";
 
-import { Button } from '../Button';
-import { Caption } from '../Caption';
-import { Check } from '../Check';
-import { Icon } from '../Icon';
-import { Text } from '../Text';
+import { Button } from "../Button";
+import { Caption } from "../Caption";
+import { Check } from "../Check";
+import { Icon } from "../Icon";
+import { Text } from "../Text";
 
-import { Pagination } from './Pagination';
+import { Pagination } from "./Pagination";
 
 const ProductCard = ({
   id,
@@ -30,7 +30,7 @@ const ProductCard = ({
   margem,
   precoSug,
   margemEst,
-  carteira
+  carteira,
 }) => (
   <div className="card">
     <span>
@@ -45,77 +45,93 @@ const ProductCard = ({
       <div className="colors">
         <span
           className="border-radius-circle"
-          style={colors[0]
-                      ? { backgroundColor: colors[0] }
-                      : { border: '1px dotted red' }}
+          style={
+            colors[0]
+              ? { backgroundColor: colors[0] }
+              : { border: "1px dotted red" }
+          }
         />
         <span
           className="border-radius-circle"
-          style={colors[1]
-                      ? { backgroundColor: colors[1] }
-                      : { border: '1px dotted red' }}
+          style={
+            colors[1]
+              ? { backgroundColor: colors[1] }
+              : { border: "1px dotted red" }
+          }
         />
         <span
           className="border-radius-circle"
-          style={colors[2]
-                      ? { backgroundColor: colors[2] }
-                      : { border: '1px dotted red' }}
+          style={
+            colors[2]
+              ? { backgroundColor: colors[2] }
+              : { border: "1px dotted red" }
+          }
         />
-        {colors.length > 3 && (
-          <Icon size={8} icon="plus" />
-        )}
+        {colors.length > 3 && <Icon size={8} icon="plus" />}
       </div>
     </span>
     <span className="fixed">
-      <Caption className="color-neutral-30">
-        #
-        {id}
-      </Caption>
-      <Text size="xs" weight="bold">{name}</Text>
+      <Caption className="color-neutral-30">#{id}</Caption>
+      <Text size="xs" weight="bold">
+        {name}
+      </Text>
     </span>
     <span>
       <Caption className="color-neutral-30">Lista</Caption>
-      <Text size="xs" weight="bold">{lista}</Text>
+      <Text size="xs" weight="bold">
+        {lista}
+      </Text>
     </span>
     <span>
       <Caption className="color-neutral-30">EOH</Caption>
-      <Text size="xs" weight="bold">{eoh}</Text>
+      <Text size="xs" weight="bold">
+        {eoh}
+      </Text>
     </span>
     <span>
       <Caption className="color-neutral-30">ST Sem.</Caption>
-      <Text size="xs" weight="bold">{stSem}</Text>
+      <Text size="xs" weight="bold">
+        {stSem}
+      </Text>
     </span>
     <span>
       <Caption className="color-neutral-30">Em Estoque</Caption>
-      <Text size="xs" weight="bold">{emestoque}</Text>
+      <Text size="xs" weight="bold">
+        {emestoque}
+      </Text>
     </span>
     <span>
       <Caption className="color-neutral-30">Preço Méd.</Caption>
-      <Text size="xs" weight="bold" className="color-blue-dark">{precoMedio}</Text>
+      <Text size="xs" weight="bold" className="color-blue-dark">
+        {precoMedio}
+      </Text>
     </span>
     <span>
       <Caption className="color-neutral-30">Margem</Caption>
-      <Text size="xs" weight="bold" className="color-blue-dark">{margem}</Text>
+      <Text size="xs" weight="bold" className="color-blue-dark">
+        {margem}
+      </Text>
     </span>
     <span>
       <Caption className="color-neutral-30">Preço Sug.</Caption>
-      <Text size="xs" weight="bold" className="color-green-dark">{precoSug}</Text>
+      <Text size="xs" weight="bold" className="color-green-dark">
+        {precoSug}
+      </Text>
     </span>
     <span>
       <Caption className="color-neutral-30">Margem Est.</Caption>
-      <Text size="xs" weight="bold">{margemEst}</Text>
+      <Text size="xs" weight="bold">
+        {margemEst}
+      </Text>
     </span>
     <span>
       <Caption className="color-neutral-30">Carteira</Caption>
-      <Text size="xs" weight="bold">{carteira}</Text>
+      <Text size="xs" weight="bold">
+        {carteira}
+      </Text>
     </span>
     <span>
-      <Button
-        icon="more-vertical"
-        label=""
-        onClick={() => {}}
-        type="ghost"
-      />
+      <Button icon="more-vertical" label="" onClick={() => {}} type="ghost" />
     </span>
   </div>
 );
@@ -130,20 +146,21 @@ const DataList = ({
   paginationCount = 10,
   recordCount,
   manualPagination = false,
-  currentPage
+  currentPage,
 }) => {
   const [tableData, setTableData] = useState([]);
   const [controlledIndex, setControlledIndex] = useState(currentPage);
   const columns = React.useMemo(() => {
     const cols = [];
-    dataConfig.map((item) => cols.push({ Header: item.label, accessor: item.value }));
+    dataConfig.map((item) =>
+      cols.push({ Header: item.label, accessor: item.value })
+    );
     return cols;
   }, []);
 
   useEffect(() => {
     setTableData(data);
   }, [data]);
-
 
   const {
     state,
@@ -186,17 +203,15 @@ const DataList = ({
   };
 
   return (
-    <div
-      className={[
-        'ragnarok',
-        'datalist',
-      ].join(' ')}
-      data-testid="datalist"
-    >
+    <div className={["aidron", "datalist"].join(" ")} data-testid="datalist">
       <div className="content">
-        {page.map((item) => (PropedComponent(
-          <ItemComponent />, { ...itemProps, ...item.original }
-        )))}
+        {page.map((item, index) =>
+          PropedComponent(<ItemComponent />, {
+            ...itemProps,
+            ...item.original,
+            key: index,
+          })
+        )}
       </div>
       <Pagination
         onPageChange={onPageChange}
@@ -227,7 +242,7 @@ DataList.propTypes = {
   /**
    * Number of records in the list
    */
-  recordCount: PropTypes.arrayOf(Number).isRequired,
+  recordCount: PropTypes.number.isRequired,
   /**
    * Sorting options
    */
@@ -259,10 +274,7 @@ DataList.defaultProps = {
   itemProps: {},
   onPageChange: undefined,
   manualPagination: false,
-  currentPage: 1
+  currentPage: 1,
 };
 
-export {
-  DataList,
-  ProductCard
-};
+export { DataList, ProductCard };
