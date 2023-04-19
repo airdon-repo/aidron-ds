@@ -112,7 +112,7 @@ const Select = ({
         })
         .filter(Boolean)
         .map((x) => x.props.children);
-      setSelectedText(parseName(names));
+      setSelectedText(`${label}: ${parseName(names)}`);
     }
     if (handleChange) handleChange(multiSelected);
   }, [multiSelected]);
@@ -126,7 +126,9 @@ const Select = ({
           (child) => child.props.value === selectedItem
         );
         setSelectedText(
-          selectedItem && first ? first.props.children : undefined
+          `${label}: ${
+            selectedItem && first ? first.props.children : undefined
+          }`
         );
       }
       if (!selectedItem) setSelectedText(label);
@@ -216,6 +218,10 @@ Select.propTypes = {
    */
   selected: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   /**
+   * Label text to show
+   */
+  label: PropTypes.string,
+  /**
    * Width of the whole component
    */
   width: PropTypes.string,
@@ -240,6 +246,7 @@ Select.propTypes = {
 Select.defaultProps = {
   children: "",
   selected: undefined,
+  label: undefined,
   multiselect: false,
   width: "250px",
   readOnly: false,

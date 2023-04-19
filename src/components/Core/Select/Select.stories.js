@@ -40,9 +40,24 @@ SelectInput.args = {
   readOnly: true,
 };
 
+export const SelectInputLabel = Template.bind({});
+SelectInputLabel.args = {
+  selected: "3",
+  readOnly: true,
+  label: "Product",
+};
+
 export const MultiSelect = Template.bind({});
 MultiSelect.args = {
   selected: ["1", "3"],
   readOnly: true,
   multiselect: true,
+};
+
+export const MultiSelectLabel = Template.bind({});
+MultiSelectLabel.args = {
+  selected: ["1", "3"],
+  readOnly: true,
+  multiselect: true,
+  label: "Products",
 };
