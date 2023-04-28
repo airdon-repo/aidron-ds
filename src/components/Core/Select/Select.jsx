@@ -112,7 +112,7 @@ const Select = ({
         })
         .filter(Boolean)
         .map((x) => x.props.children);
-      setSelectedText(`${label}: ${parseName(names)}`);
+      setSelectedText(`${label} ${parseName(names)}`);
     }
     if (handleChange) handleChange(multiSelected);
   }, [multiSelected]);
@@ -126,9 +126,7 @@ const Select = ({
           (child) => child.props.value === selectedItem
         );
         setSelectedText(
-          `${label}: ${
-            selectedItem && first ? first.props.children : undefined
-          }`
+          `${label} ${selectedItem && first ? first.props.children : undefined}`
         );
       }
       if (!selectedItem) setSelectedText(label);
