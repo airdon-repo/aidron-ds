@@ -1250,7 +1250,7 @@ div.menu-select-wrapper {
     display: inline-flex;
     flex-direction: column;
     position: fixed;
-    z-index: 8;
+    z-index: 999;
     height: inherit;
     max-height: calc(5 * 59px);
     overflow: hidden auto;
