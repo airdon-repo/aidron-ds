@@ -1,12 +1,12 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { Dropdown, Menu, MenuItem } from './Menu';
-import { Button } from '../Button';
-import { Icon } from '../Icon';
+import { Dropdown, Menu, MenuItem } from "./Menu";
+import { Button } from "../Button";
+import { Icon } from "../Icon";
 
 export default {
-  title: 'Core/Menu',
+  title: "Core/Menu",
   component: Menu,
 };
 
@@ -23,30 +23,34 @@ const Template = (args) => {
         >
           Click to show
         </Button>
-        <Dropdown open={open} position={args.position}>
+        <Dropdown open={open} setOpen={setOpen} position={args.position}>
           <MenuItem>
-            <Icon icon="file-text" style={{ marginRight: '16px' }} />
+            <Icon icon="file-text" style={{ marginRight: "16px" }} />
             Detalhes
           </MenuItem>
           <MenuItem>
-            <Icon icon="activity" style={{ marginRight: '16px' }} />
+            <Icon icon="activity" style={{ marginRight: "16px" }} />
             Analisar
           </MenuItem>
           <MenuItem>
-            <Icon icon="meh" style={{ marginRight: '16px' }} />
+            <Icon icon="meh" style={{ marginRight: "16px" }} />
             Ignorar
           </MenuItem>
           <MenuItem>
-            <Icon icon="list" style={{ marginRight: '16px' }} />
+            <Icon icon="list" style={{ marginRight: "16px" }} />
             Adicionar à Lista
-            <Icon size={16} icon="chevron-right" style={{ marginLeft: '16px' }} />
+            <Icon
+              size={16}
+              icon="chevron-right"
+              style={{ marginLeft: "16px" }}
+            />
             <Dropdown position="right">
               <MenuItem>
-                <Icon icon="zap" style={{ marginRight: '16px' }} />
+                <Icon icon="zap" style={{ marginRight: "16px" }} />
                 Lista A
               </MenuItem>
               <MenuItem>
-                <Icon icon="zap" style={{ marginRight: '16px' }} />
+                <Icon icon="zap" style={{ marginRight: "16px" }} />
                 Lista B
               </MenuItem>
             </Dropdown>
@@ -60,5 +64,5 @@ const Template = (args) => {
 export const Basic = Template.bind({});
 Basic.args = {
   open: false,
-  position: 'bottom'
+  position: "bottom",
 };
