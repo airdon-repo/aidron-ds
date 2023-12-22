@@ -1272,6 +1272,7 @@ div.menu-select-wrapper {
 
     &.open {
       box-shadow: $elevation-level-light-3;
+      margin-top: 56px;
     }
     // span.menu-dropdown-submenu-outer {
     //   display: flex;
@@ -1418,7 +1419,7 @@ div.menu-select-wrapper {
   }
   div.menu-select {
     display: inline-flex;
-    position: relative;
+    position: absolute;
     width: 100%;
   }
   // div.menu-dropdown {
